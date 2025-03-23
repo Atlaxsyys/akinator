@@ -45,12 +45,12 @@ size_t n_string(char* commands_buffer, long size_command)
     return counter_string;
 }
 
-const char** create_string_buffer(char* text_buffer, FILE* file_read)
+char** create_string_buffer(char* text_buffer, FILE* file_read)
 {
     long size_file = size_text_file(file_read);
     size_t number_of_lines = n_string(text_buffer, size_file);
 
-    const char** string_buffer = (const char**) calloc(number_of_lines + 1, sizeof(char*));
+    char** string_buffer = (char**) calloc(number_of_lines + 1, sizeof(char*));
 
     int line_number = 1;
     string_buffer[0] = &(text_buffer[0]);

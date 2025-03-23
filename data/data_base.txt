@@ -1,5 +1,7 @@
 animal?
 Does it live in water?
+small?
+fish
 Shark
 penguin
 fly?
