@@ -3,7 +3,7 @@
 typedef char* elem_t;
 
 typedef struct Node_t {
-    elem_t value;
+    elem_t data;
     struct Node_t* left;
     struct Node_t* right;
 } Node_t;

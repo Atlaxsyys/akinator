@@ -6,27 +6,27 @@
 #include "tree.h"
 
 
-Node_t* create_node(elem_t value)
+Node_t* create_node(elem_t data)
 {
     Node_t* node = (Node_t*) calloc(1, sizeof(Node_t));
 
     if (node == nullptr)   { return nullptr; }
 
-    node->value = strdup(value);
+    node->data = strdup(data);
     node->left = nullptr;
     node->right = nullptr;
 
     return node;
 }
 
-Node_t* search_node(Node_t* root, elem_t value)
+Node_t* search_node(Node_t* root, elem_t data)
 {
     if (root == nullptr)  { return nullptr; }
     
-    if (strcmp(root->value, value) == 0) { return root; }
+    if (strcmp(root->data, data) == 0) { return root; }
 
-    if (strcmp(value, root->value) < 0)  { return search_node(root->left, value);  }
-    else                                 { return search_node(root->right, value); }
+    if (strcmp(data, root->data) < 0)  { return search_node(root->left, data);  }
+    else                                 { return search_node(root->right, data); }
 
     return nullptr;
 }
@@ -37,7 +37,7 @@ Tree_errors free_tree(Node_t** node)
 
     free_tree(&((*node)->left));
     free_tree(&((*node)->right));
-    free((*node)->value);
+    free((*node)->data);
     free(*node);
     *node = nullptr;
 
@@ -46,7 +46,7 @@ Tree_errors free_tree(Node_t** node)
 
 Tree_errors dump_tree(Node_t* root, FILE* file)
 {
-    if(root) fprintf(file, "    \"%p\" [shape=Mrecord, style=filled; fillcolor=\"#F0C0F0\"; label=\"{value: %s | current: %p | { Left: %p | Right: %p } }\"];\n", root, root->value, root, root->left, root->right);
+    if(root) fprintf(file, "    \"%p\" [shape=Mrecord, style=filled; fillcolor=\"#F0C0F0\"; label=\"{data: %s | current: %p | { Left: %p | Right: %p } }\"];\n", root, root->data, root, root->left, root->right);
 
     if (root->left)
     {
@@ -97,18 +97,18 @@ Tree_errors generate_dot(Node_t* root)
     return SUCCESS;
 }
 
-Node_t* delete_node(Node_t* root, elem_t value)
+Node_t* delete_node(Node_t* root, elem_t data)
 {
     if (!root) { return nullptr; }
     
-    if (strcmp(value, root->value) < 0)
+    if (strcmp(data, root->data) < 0)
     {
-        root->left = delete_node(root->left, value);
+        root->left = delete_node(root->left, data);
     }
 
-    else if (strcmp(value, root->value) > 0)
+    else if (strcmp(data, root->data) > 0)
     {
-        root->right = delete_node(root->right, value);
+        root->right = delete_node(root->right, data);
     }
 
     else 
@@ -127,7 +127,7 @@ Tree_errors traverse(Node_t* root)
 
     if (root->left) { traverse(root->left); }
 
-    fprintf(stderr, "value: \"%s\"\n", root->value);
+    fprintf(stderr, "data: \"%s\"\n", root->data);
 
     if (root->right) { traverse(root->right); }
 
@@ -147,7 +147,7 @@ Node_t* build_tree(Node_t* root, char** string_buffer, int* line_number, int num
 
     (*line_number)++;
 
-    if (root->value[strlen(root->value) - 1] == '?')
+    if (root->data[strlen(root->data) - 1] == '?')
     {
         root->left  = build_tree(root->left,  string_buffer, line_number, number_of_string);
         root->right = build_tree(root->right, string_buffer, line_number, number_of_string);
@@ -166,7 +166,7 @@ Tree_errors akinator(Node_t* root)
 
     while(current)
     {
-        fprintf(stderr, "%s (y/n): ", current->value);
+        fprintf(stderr, "%s (y/n): ", current->data);
         scanf("%s", answer);
 
         if (strcmp(answer, "y") == 0)
@@ -218,7 +218,7 @@ Tree_errors game(Node_t* root)
 
         fprintf(stderr, "You want play again? (y/n): ");
         scanf("%s", play_again);
-        
+
     } while(strcmp(play_again, "y") == 0);
 
     return SUCCESS;
@@ -237,16 +237,16 @@ Tree_errors add_new_node(Node_t* current)
 
     new_answer[strlen(new_answer) - 1] = '\0';
 
-    fprintf(stderr, "Which question differs %s from %s", new_answer, current->value);
+    fprintf(stderr, "Which question differs %s from %s", new_answer, current->data);
     fgets(new_question, sizeof(new_question), stdin);
 
     new_question[strlen(new_question) - 1] = '\0';
 
-    char* old_answer = strdup(current->value);
+    char* old_answer = strdup(current->data);
 
-    free(current->value);
+    free(current->data);
 
-    current->value = strdup(new_question);
+    current->data = strdup(new_question);
 
     current->left  = create_node(new_answer);
     current->right = create_node(old_answer);
@@ -263,7 +263,7 @@ Tree_errors saveTree(Node_t* root, FILE *file)
         return SUCCESS;
     }
 
-    fprintf(file, "%s\n", root->value);
+    fprintf(file, "%s\n", root->data);
 
     saveTree(root->left, file);
     saveTree(root->right, file);
