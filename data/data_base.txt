@@ -1,0 +1,7 @@
+animal?
+Does it live in water?
+Shark
+penguin
+fly?
+orel
+cat
