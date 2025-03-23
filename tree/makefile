@@ -3,24 +3,18 @@ FLAGS = -DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-op
 CC = g++
 CMD = ./tree.exe
 INCLUDE = -I../include
+CPPSRC = akinator_game.cpp file_data.cpp tree.cpp main.cpp
 
-build: tree.o main.o file_data.o akinator_game.o
-	@$(CC) tree.o main.o file_data.o akinator_game.o $(FLAGS) -g $(INCLUDE) -o $(CMD)
+CPPOBJ = $(CPPSRC:%.cpp=%.o)
+
+%.o: %.cpp
+	$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@
+
+build: $(CPPOBJ)
+	@$(CC) $^ $(FLAGS) -g $(INCLUDE) -o $(CMD)
 
 run: build
 	$(CMD) ../data/data_base.txt
-
-tree.o: tree.cpp
-	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o tree.o tree.cpp
-
-main.o: main.cpp
-	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o main.o main.cpp
-
-file_data.o: file_data.cpp
-	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o file_data.o file_data.cpp
-
-akinator_game.o: akinator_game.cpp
-	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o akinator_game.o akinator_game.cpp
 
 clean:
 	rm -f main.o tree.o file_data.o akinator_game.o $(CMD)
