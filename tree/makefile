@@ -4,11 +4,11 @@ CC = g++
 CMD = ./tree.exe
 INCLUDE = -I../include
 
-build: tree.o main.o file_data.o
-	@$(CC) tree.o main.o file_data.o $(FLAGS) -g $(INCLUDE) -o $(CMD)
+build: tree.o main.o file_data.o akinator_game.o
+	@$(CC) tree.o main.o file_data.o akinator_game.o $(FLAGS) -g $(INCLUDE) -o $(CMD)
 
 run: build
-	$(CMD)
+	$(CMD) ../data/data_base.txt
 
 tree.o: tree.cpp
 	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o tree.o tree.cpp
@@ -19,5 +19,8 @@ main.o: main.cpp
 file_data.o: file_data.cpp
 	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o file_data.o file_data.cpp
 
+akinator_game.o: akinator_game.cpp
+	@$(CC) $(FLAGS) $(INCLUDE) -g -c -o akinator_game.o akinator_game.cpp
+
 clean:
-	rm -f main.o tree.o file_data.o $(CMD)
+	rm -f main.o tree.o file_data.o akinator_game.o $(CMD)

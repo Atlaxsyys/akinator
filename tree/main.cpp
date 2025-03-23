@@ -3,10 +3,25 @@
 
 #include "tree.h"
 #include "file_data.h"
+#include "akinator_game.h"
 
-int main()
+int main(const int argc, const char* argv[])
 {
-    FILE* file_read = fopen(FILE_NAME, "rw");
+    if (argc != 2)
+    {
+        fprintf(stderr, "Error: not enough args:\n %s <txt_file>", argv[0]);
+
+        return 1;
+    }
+
+    FILE* file_read = fopen(argv[1], "rw");
+
+    if (! file_read)
+    {
+        fprintf(stderr, "Error open file: %s", argv[1]);
+
+        return 1;
+    }
 
     char* text_buffer   = create_buffer(file_read);
     long size_file = size_text_file(file_read);
@@ -26,7 +41,14 @@ int main()
     game(root);
     generate_dot(root);
 
-    FILE* file_write = fopen(FILE_NAME, "wb");
+    FILE* file_write = fopen(argv[1], "wb");
+
+    if (! file_write)
+    {
+        fprintf(stderr, "Error open file: %s", argv[1]);
+
+        return 1;
+    }
 
     saveTree(root, file_write);
 

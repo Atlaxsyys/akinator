@@ -47,6 +47,9 @@ size_t n_string(char* commands_buffer, long size_command)
 
 char** create_string_buffer(char* text_buffer, FILE* file_read)
 {
+    assert(text_buffer);
+    assert(file_read);
+    
     long size_file = size_text_file(file_read);
     size_t number_of_lines = n_string(text_buffer, size_file);
 

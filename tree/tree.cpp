@@ -4,6 +4,7 @@
 #include <assert.h>
 
 #include "tree.h"
+#include "colour.h"
 
 
 Node_t* create_node(elem_t data)
@@ -37,8 +38,10 @@ Tree_errors free_tree(Node_t** node)
 
     free_tree(&((*node)->left));
     free_tree(&((*node)->right));
+
     free((*node)->data);
     free(*node);
+
     *node = nullptr;
 
     return SUCCESS;
@@ -134,16 +137,13 @@ Tree_errors traverse(Node_t* root)
     return SUCCESS;
 }
 
-Node_t* build_tree(Node_t* root, char** string_buffer, int* line_number, int number_of_string)
+Node_t* build_tree(Node_t* root, char** string_buffer, int* line_number, size_t number_of_string)
 {
     assert(string_buffer);
 
     if (*line_number >= number_of_string) { return nullptr; }
 
-    if(! root)
-    {
-        root = create_node(string_buffer[*line_number]);
-    }
+    if(! root)  { root = create_node(string_buffer[*line_number]); }
 
     (*line_number)++;
 
@@ -155,106 +155,6 @@ Node_t* build_tree(Node_t* root, char** string_buffer, int* line_number, int num
 
     return root;
 }   
-
-Tree_errors akinator(Node_t* root)
-{
-    Node_t* current = root;
-
-    char answer[SIZE_ANSWER] = {};
-
-    fprintf(stderr, "Let's play bro\n");
-
-    while(current)
-    {
-        fprintf(stderr, "%s (y/n): ", current->data);
-        scanf("%s", answer);
-
-        if (strcmp(answer, "y") == 0)
-        {
-            if (current->left == nullptr)
-            {
-                fprintf(stderr, "I guessed right\n");
-
-                return SUCCESS;
-            }
-
-            current = current->left;
-        }
-
-        else if (strcmp(answer, "n") == 0)
-        {
-            if (current->right == nullptr)
-            {
-                fprintf(stderr, "I dont know what it is.\nYou want add new element (y/n): ");
-                scanf("%s", answer);
-
-                if (strcmp(answer, "y") == 0)
-                {
-                    add_new_node(current);
-                }
-
-                return SUCCESS;
-            }
-
-            current = current->right;
-        }
-
-        else
-        {
-            fprintf(stderr, "Please, enter y or n\n");
-        }
-    }
-
-    return SUCCESS;
-}
-
-Tree_errors game(Node_t* root)
-{
-    char play_again[SIZE_ANSWER] = {};
-
-    do
-    {
-        akinator(root);
-
-        fprintf(stderr, "You want play again? (y/n): ");
-        scanf("%s", play_again);
-
-    } while(strcmp(play_again, "y") == 0);
-
-    return SUCCESS;
-}
-
-Tree_errors add_new_node(Node_t* current)
-{
-    char new_answer[SIZE_ANSWER] = {};
-    char new_question[SIZE_QUESTION] = {};
-
-    fprintf(stderr, "What word did you wish for?");
-
-    getchar();
-
-    fgets(new_answer, sizeof(new_answer), stdin);
-
-    new_answer[strlen(new_answer) - 1] = '\0';
-
-    fprintf(stderr, "Which question differs %s from %s", new_answer, current->data);
-    fgets(new_question, sizeof(new_question), stdin);
-
-    new_question[strlen(new_question) - 1] = '\0';
-
-    char* old_answer = strdup(current->data);
-
-    free(current->data);
-
-    current->data = strdup(new_question);
-
-    current->left  = create_node(new_answer);
-    current->right = create_node(old_answer);
-
-    free(old_answer);
-
-    return SUCCESS;
-}
 
 Tree_errors saveTree(Node_t* root, FILE *file)
 {
