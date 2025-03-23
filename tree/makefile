@@ -8,7 +8,7 @@ CPPSRC = akinator_game.cpp file_data.cpp tree.cpp main.cpp
 CPPOBJ = $(CPPSRC:%.cpp=%.o)
 
 %.o: %.cpp
-	$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@
+	@$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@
 
 build: $(CPPOBJ)
 	@$(CC) $^ $(FLAGS) -g $(INCLUDE) -o $(CMD)

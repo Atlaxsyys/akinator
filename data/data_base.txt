@@ -1,10 +1,15 @@
-animal?
-Does it live in water?
-small?
-fish
-Shark
-penguin
-fly?
-big?
-airplane
-orel
+from mipt?
+semer?
+matan?
+zagr_mamont
+linal?
+anechka
+physics?
+Kholin
+freak
+livanov
+student?
+live in 209?
+square head?
+damir
+prodva?
