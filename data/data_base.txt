@@ -6,6 +6,8 @@ linal?
 anechka
 physics?
 Kholin
+legendary?
+Kuliev
 freak
 livanov
 student?
@@ -14,3 +16,4 @@ square head?
 damir
 prodva?
 danchik
+dima

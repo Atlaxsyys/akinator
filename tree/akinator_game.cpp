@@ -105,7 +105,7 @@ Tree_errors add_new_node(Node_t* current)
     return SUCCESS;
 }
 
-void menu(Node_t* root)
+void menu(Node_t* root, const char* argv[])
 {
     int choise = 0;
 
@@ -114,7 +114,8 @@ void menu(Node_t* root)
         fprintf(stderr, PURPLE_TEXT("------ Welcome to the Akinator game ------\n"));
         fprintf(stderr, GREEN_TEXT("1. Play\n"));
         fprintf(stderr, GREEN_TEXT("2. Show data_base\n"));
-        fprintf(stderr, GREEN_TEXT("3. Exit\n"));
+        fprintf(stderr, GREEN_TEXT("3. Exit with saving\n"));
+        fprintf(stderr, GREEN_TEXT("4. Exit without saving\n"));
         fprintf(stderr, LIGHT_BLUE_TEXT("choose an action\n"));
 
         scanf("%d", &choise);
@@ -134,9 +135,21 @@ void menu(Node_t* root)
                 break;
             }
 
-            case EXIT:
+            case EXIT_WITH_SAVING:
             {
-                fprintf(stderr, PURPLE_TEXT("Exit, goodbye bro!\n"));
+                FILE* file_write = fopen(argv[1], "wb");
+
+                saveTree(root, file_write);
+
+                fclose(file_write);
+
+                fprintf(stderr, PURPLE_TEXT("Exit - new data_base saved, goodbye bro!\n"));
+                break;
+            }
+
+            case EXIT_WITHOUT_SAVING:
+            {
+                fprintf(stderr, PURPLE_TEXT("Exit - new data_base didn`t save, goodbye bro!\n"));
                 break;
             }
 
@@ -145,11 +158,11 @@ void menu(Node_t* root)
                 
         }
 
-    } while (choise != EXIT);
+    } while (choise != EXIT_WITH_SAVING && choise != EXIT_WITHOUT_SAVING);
     
 }
 
 void show_data_base()
 {
-    system("wslview ../tests/graph_0.png");
+    system("wslview ../graph_dump/graph_0.png");
 }

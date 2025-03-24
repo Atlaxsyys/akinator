@@ -14,7 +14,7 @@ int main(const int argc, const char* argv[])
         return 1;
     }
 
-    FILE* file_read = fopen(argv[1], "rw");
+    FILE* file_read = fopen(argv[1], "r");
 
     if (! file_read)
     {
@@ -38,24 +38,22 @@ int main(const int argc, const char* argv[])
     root = build_tree(root, string_buffer, &line_number, number_of_string); 
 
     generate_dot(root);
-    // system("wslview ../tests/graph_0.png");
-    // game(root);
-    show_menu(root);
     
-    generate_dot(root);
-
-    FILE* file_write = fopen(argv[1], "wb");
-
-    if (! file_write)
-    {
-        fprintf(stderr, "Error open file: %s", argv[1]);
-
-        return 1;
-    }
-
-    saveTree(root, file_write);
-
-    fclose(file_write);
+    
+    // FILE* file_write = fopen(argv[1], "wb");
+    
+    // if (! file_write)
+    // {
+        //     fprintf(stderr, "Error open file: %s", argv[1]);
+        
+        //     return 1;
+        // }
+        
+        menu(root, argv);
+        // saveTree(root, file_write);
+        generate_dot(root);
+    
+    // fclose(file_write);
 
     free_tree(&root);
     free(text_buffer);

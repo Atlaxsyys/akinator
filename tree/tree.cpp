@@ -74,8 +74,8 @@ Tree_errors generate_dot(Node_t* root)
     char* png_filename = (char*) calloc(SIZE_PNG_FILENAME, sizeof(char));
     char* command      = (char*) calloc(SIZE_COMMAND,      sizeof(char));
 
-    sprintf(dot_filename, "../tests/graph_%d.dot", file_counter);
-    sprintf(png_filename, "../tests/graph_%d.png", file_counter);
+    sprintf(dot_filename, "../graph_dump/graph_%d.dot", file_counter);
+    sprintf(png_filename, "../graph_dump/graph_%d.png", file_counter);
 
     FILE* file = fopen(dot_filename, "w");
     
