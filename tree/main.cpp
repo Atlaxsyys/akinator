@@ -38,7 +38,10 @@ int main(const int argc, const char* argv[])
     root = build_tree(root, string_buffer, &line_number, number_of_string); 
 
     generate_dot(root);
-    game(root);
+    // system("wslview ../tests/graph_0.png");
+    // game(root);
+    show_menu(root);
+    
     generate_dot(root);
 
     FILE* file_write = fopen(argv[1], "wb");

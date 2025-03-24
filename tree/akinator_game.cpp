@@ -75,8 +75,8 @@ Tree_errors game(Node_t* root)
 
 Tree_errors add_new_node(Node_t* current)
 {
-    char new_answer[SIZE_ANSWER] = {};
-    char new_question[SIZE_QUESTION] = {};
+    char new_answer[SIZE_ANSWER]     = {};
+    char new_question[SIZE_QUESTION] = {}; 
 
     fprintf(stderr, YELLOW_TEXT("What word did you wish for?"));
 
@@ -103,4 +103,53 @@ Tree_errors add_new_node(Node_t* current)
     free(old_answer);
 
     return SUCCESS;
+}
+
+void menu(Node_t* root)
+{
+    int choise = 0;
+
+    do
+    {
+        fprintf(stderr, PURPLE_TEXT("------ Welcome to the Akinator game ------\n"));
+        fprintf(stderr, GREEN_TEXT("1. Play\n"));
+        fprintf(stderr, GREEN_TEXT("2. Show data_base\n"));
+        fprintf(stderr, GREEN_TEXT("3. Exit\n"));
+        fprintf(stderr, LIGHT_BLUE_TEXT("choose an action\n"));
+
+        scanf("%d", &choise);
+        getchar();
+
+        switch(choise)
+        {
+            case PLAY:
+            {
+                akinator(root);
+                break;
+            }
+
+            case SHOW_DATA_BASE:
+            {
+                show_data_base();
+                break;
+            }
+
+            case EXIT:
+            {
+                fprintf(stderr, PURPLE_TEXT("Exit, goodbye bro!\n"));
+                break;
+            }
+
+            default:
+                fprintf(stderr, RED_TEXT("___Unknown command___\n\n"));
+                
+        }
+
+    } while (choise != EXIT);
+    
+}
+
+void show_data_base()
+{
+    system("wslview ../tests/graph_0.png");
 }
