@@ -2,10 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <ctype.h>
 
 #include "tree.h"
 #include "colour.h"
 
+#ifdef DEBUG_AKINATOR
+    #define ON_DEBUG(...) __VA_ARGS__
+#else
+    #define ON_DEBUG(...)
+#endif
 
 Node_t* create_node(elem_t data)
 {
@@ -22,12 +28,30 @@ Node_t* create_node(elem_t data)
 
 Node_t* search_node(Node_t* root, elem_t data)
 {
-    if (root == nullptr)  { return nullptr; }
-    
-    if (strcmp(root->data, data) == 0) { return root; }
+    ON_DEBUG( (stderr, "search: root = [%p]\n", root); )
 
-    if (strcmp(data, root->data) < 0)  { return search_node(root->left, data);  }
-    else                                 { return search_node(root->right, data); }
+    ON_DEBUG( (stderr, "after <root==nullptr> : root[%p] >> root-data = '%s' << look for: '%s'\n", root, root->data, data); )
+
+    if (strcmp(root->data, data) == 0)
+    {
+        ON_DEBUG( (stderr, PURPLE_TEXT("\nI GOT SUKA EGO >>> [%p]: '%s'\n\n"),
+                            root, root->data); )
+        return root;
+    }
+
+    if (root->left)
+    {
+        Node_t* root_l = search_node(root->left, data);  
+
+        if (root_l != nullptr)  { return root_l; }
+    }
+    
+    if (root->right)
+    {
+        Node_t* root_r = search_node(root->right, data);
+
+        if (root_r != nullptr)  { return root_r; }
+    }
 
     return nullptr;
 }
@@ -137,7 +161,7 @@ Tree_errors traverse(Node_t* root)
     return SUCCESS;
 }
 
-Node_t* build_tree(Node_t* root, char** string_buffer, int* line_number, size_t number_of_string)
+Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size_t number_of_string)
 {
     assert(string_buffer);
 

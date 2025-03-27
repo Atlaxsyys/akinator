@@ -31,30 +31,18 @@ int main(const int argc, const char* argv[])
 
     fclose(file_read);
 
-    int line_number = 0;
+    size_t line_number = 0;
 
     Node_t* root = nullptr;
 
     root = build_tree(root, string_buffer, &line_number, number_of_string); 
 
     generate_dot(root);
-    
-    
-    // FILE* file_write = fopen(argv[1], "wb");
-    
-    // if (! file_write)
-    // {
-        //     fprintf(stderr, "Error open file: %s", argv[1]);
         
-        //     return 1;
-        // }
-        
-        menu(root, argv);
-        // saveTree(root, file_write);
-        generate_dot(root);
-    
-    // fclose(file_write);
+    menu(root, argv);
 
+    generate_dot(root);
+    
     free_tree(&root);
     free(text_buffer);
     free(string_buffer);

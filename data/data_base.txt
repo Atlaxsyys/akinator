@@ -8,6 +8,8 @@ physics?
 Kholin
 legendary?
 Kuliev
+Teorver?
+Shtepin
 freak
 livanov
 student?
@@ -17,3 +19,5 @@ damir
 prodva?
 danchik
 dima
+xyi
+poltorashka

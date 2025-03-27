@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "colour.h"
 #include "akinator_game.h"
+
+#ifdef DEBUG_AKINATOR
+    #define ON_DEBUG(...) __VA_ARGS__
+#else
+    #define ON_DEBUG(...)
+#endif
 
 Tree_errors akinator(Node_t* root)
 {
@@ -112,10 +119,11 @@ void menu(Node_t* root, const char* argv[])
     do
     {
         fprintf(stderr, PURPLE_TEXT("------ Welcome to the Akinator game ------\n"));
-        fprintf(stderr, GREEN_TEXT("1. Play\n"));
-        fprintf(stderr, GREEN_TEXT("2. Show data_base\n"));
-        fprintf(stderr, GREEN_TEXT("3. Exit with saving\n"));
-        fprintf(stderr, GREEN_TEXT("4. Exit without saving\n"));
+        fprintf(stderr, GREEN_TEXT("%d. Play\n"), PLAY);
+        fprintf(stderr, GREEN_TEXT("%d. Show data_base\n"), SHOW_DATA_BASE);
+        fprintf(stderr, GREEN_TEXT("%d. Compare_elements\n"), COMPARE_NODES);
+        fprintf(stderr, GREEN_TEXT("%d. Exit with saving\n"), EXIT_WITH_SAVING);
+        fprintf(stderr, GREEN_TEXT("%d. Exit without saving\n"), EXIT_WITHOUT_SAVING);
         fprintf(stderr, LIGHT_BLUE_TEXT("choose an action\n"));
 
         scanf("%d", &choise);
@@ -132,6 +140,20 @@ void menu(Node_t* root, const char* argv[])
             case SHOW_DATA_BASE:
             {
                 show_data_base();
+                break;
+            }
+
+            case COMPARE_NODES:
+            {
+                fprintf(stderr, "enter two elements to compare\n");
+
+                char first_elem[SIZE_ANSWER]  = {};
+                char second_elem[SIZE_ANSWER] = {};
+
+                scanf("%s %s", first_elem, second_elem);
+
+                compare_nodes(root, first_elem, second_elem);
+
                 break;
             }
 
@@ -165,4 +187,85 @@ void menu(Node_t* root, const char* argv[])
 void show_data_base()
 {
     system("wslview ../graph_dump/graph_0.png");
+}
+
+Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
+{
+    pth->path[pth->number_of_nodes] = strdup(root->data);
+    pth->number_of_nodes++;
+
+    if (root == node)   { return SUCCESS; }
+
+    fprintf (stderr, "node = [%p]\nroot = [%p]\n", node, root);
+    Node_t* next_node = search_node (root->left, node->data);
+
+    if (next_node)
+    {
+        if (build_path(root->left, node, pth) == SUCCESS)
+        {
+            return SUCCESS;
+        }
+    }
+
+    next_node = search_node(root->right, node->data);
+
+    if (next_node)
+    {
+        if (build_path(root->right, node, pth) == SUCCESS)
+        {
+            return SUCCESS;
+        }
+    }
+
+    return SUCCESS;
+}
+
+Tree_errors compare_nodes(Node_t* root, char* first_data, char* second_data)
+{
+    Node_t* first_node = search_node(root,  first_data);
+
+    Node_t* second_node = search_node(root, second_data);
+
+
+    Path first_path  = {};
+    Path second_path = {};
+
+    build_path(root, first_node,  &first_path );
+    build_path(root, second_node, &second_path);
+
+    int common_part = 0;
+
+    while (common_part < first_path.number_of_nodes &&
+          common_part < second_path.number_of_nodes &&
+          strcmp(first_path.path[common_part], second_path.path[common_part]) == 0)
+
+          {
+              common_part++;
+          }
+
+    if (common_part > 0)
+    {
+        fprintf(stderr, "common characteristic: \n");
+
+        for (int i = 0; i < common_part; i++)   { fprintf(stderr, "- %s\n", first_path.path[i]); }
+    }
+
+    if (common_part < first_path.number_of_nodes)
+    {
+        fprintf(stderr, "unique to %s:\n", first_data);
+
+        for (int i = common_part; i < first_path.number_of_nodes; i++)   { fprintf(stderr, "- %s\n", first_path.path[i]); }
+    }
+
+    if (common_part < second_path.number_of_nodes)
+    {
+        fprintf(stderr, "unique to %s:\n", second_data);
+
+        for (int i = common_part; i < second_path.number_of_nodes; i++)   { fprintf(stderr, "- %s\n", second_path.path[i]); }
+    }
+
+    for (int i = 0; i < first_path.number_of_nodes ; i++) free(first_path.path[i] );
+    for (int i = 0; i < second_path.number_of_nodes; i++) free(second_path.path[i]);
+
+    return SUCCESS;
 }
