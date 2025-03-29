@@ -56,7 +56,9 @@ char** create_string_buffer(char* text_buffer, FILE* file_read)
     char** string_buffer = (char**) calloc(number_of_lines + 1, sizeof(char*));
 
     int line_number = 1;
+    
     string_buffer[0] = &(text_buffer[0]);
+
     for (int i = 0; i < size_file; i++)
     {
         if (text_buffer[i] == '\n')

@@ -12,9 +12,9 @@
 
 int main(const int argc, const char* argv[])
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Akinator SFML");
-    sf::Font font;
-    font.loadFromFile("Tykewriter.ttf");
+    // sf::RenderWindow window(sf::VideoMode(800, 600), "Akinator SFML");
+    // sf::Font font;
+    // font.loadFromFile("Tykewriter.ttf");
 
     if (argc != 2)
     {
@@ -48,54 +48,55 @@ int main(const int argc, const char* argv[])
 
     generate_dot(root);
 
-    while (window.isOpen())
-    {
-        int selectedOption = -1;
-        renderMenu(window, font, selectedOption);
+    // while (window.isOpen())
+    // {
+    //     int selectedOption = -1;
+    //     renderMenu(window, font, selectedOption);
 
-        switch (selectedOption)
-        {
-            case PLAY:
-            {
-                Node_t* currentNode = root;
-                renderAkinator(window, currentNode, font);
-                break;
-            }
-            case SHOW_DATA_BASE:
-            {
-                // show_data_base();
-                break;
-            }
-            case COMPARE_NODES:
-            {
-                renderCompareNodes(window, root, font);
-                break;
+    //     switch (selectedOption)
+    //     {
+    //         case PLAY:
+    //         {
+    //             Node_t* currentNode = root;
+    //             renderAkinator(window, currentNode, font);
+    //             break;
+    //         }
+    //         case SHOW_DATA_BASE:
+    //         {
+    //             // show_data_base();
+    //             break;
+    //         }
+    //         case COMPARE_NODES:
+    //         {
+    //             renderCompareNodes(window, root, font);
+    //             break;
 
-            }
-            case EXIT_WITH_SAVING: 
-            {
-                FILE* file_write = fopen(argv[1], "wb");
+    //         }
+    //         case EXIT_WITH_SAVING: 
+    //         {
+    //             FILE* file_write = fopen(argv[1], "wb");
 
-                if (file_write)
-                {
-                    saveTree(root, file_write);
-                    fclose(file_write);
-                }
+    //             if (file_write)
+    //             {
+    //                 saveTree(root, file_write);
+    //                 fclose(file_write);
+    //             }
 
-                window.close();
-                break;
-            }
+    //             window.close();
+    //             break;
+    //         }
 
-            case EXIT_WITHOUT_SAVING:
-            {
-                window.close();
-                break;
-            }
+    //         case EXIT_WITHOUT_SAVING:
+    //         {
+    //             window.close();
+    //             break;
+    //         }
 
-            default:
-                break;
-        }
-    }
+    //         default:
+    //             break;
+    //     }
+    // }
+    
     const char* FILENAME_DATA_BASE = argv[1];
 
     menu(root, FILENAME_DATA_BASE);
