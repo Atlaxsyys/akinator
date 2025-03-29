@@ -1,19 +1,19 @@
 .PHONY: all build run
 
 build:
-	make -C tree build
+	make -C akinator build
 	
 run:
-	make -C tree run
+	make -C akinator run
 
 tree.o:
-	make -C tree tree.o
+	make -C akinator tree.o
 
 main.o:
-	make -C tree main.o
+	make -C akinator main.o
 
 file_data.o:
-	make -C tree file_data.o
+	make -C akinator file_data.o
 
 clean:
-	make -C tree clean
+	make -C akinator clean
