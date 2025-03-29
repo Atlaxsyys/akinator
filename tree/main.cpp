@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <iostream>
+#include <string>
 
 #include "tree.h"
 #include "file_data.h"
@@ -7,6 +11,10 @@
 
 int main(const int argc, const char* argv[])
 {
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Akinator SFML");
+    sf::Font font;
+    font.loadFromFile("Tykewriter.ttf"); // Файл шрифта должен быть рядом с программой
+
     if (argc != 2)
     {
         fprintf(stderr, "Error: not enough args:\n %s <txt_file>", argv[0]);
@@ -38,7 +46,43 @@ int main(const int argc, const char* argv[])
     root = build_tree(root, string_buffer, &line_number, number_of_string); 
 
     generate_dot(root);
-        
+
+    while (window.isOpen()) {
+        int selectedOption = -1;
+        renderMenu(window, font, selectedOption);
+
+        switch (selectedOption) {
+            case PLAY: {
+                Node_t* currentNode = root;
+                renderAkinator(window, currentNode, font);
+                break;
+            }
+            case SHOW_DATA_BASE: {
+                show_data_base();
+                break;
+            }
+            case COMPARE_NODES: {
+                renderCompareNodes(window, root, font);
+                break;
+
+            }
+            case EXIT_WITH_SAVING: {
+                FILE* file_write = fopen(argv[1], "wb");
+                if (file_write) {
+                    saveTree(root, file_write);
+                    fclose(file_write);
+                }
+                window.close();
+                break;
+            }
+            case EXIT_WITHOUT_SAVING: {
+                window.close();
+                break;
+            }
+            default:
+                break;
+        }
+    }
     menu(root, argv);
 
     generate_dot(root);

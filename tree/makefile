@@ -11,10 +11,10 @@ CPPOBJ = $(CPPSRC:%.cpp=%.o)
 	@$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@
 
 build: $(CPPOBJ)
-	@$(CC) $^ $(FLAGS) -g $(INCLUDE) -o $(CMD)
+	@$(CC) $^ $(FLAGS) -g $(INCLUDE) -o $(CMD) -lsfml-graphics -lsfml-window -lsfml-system
 
 run: build
-	$(CMD) ../data/data_base.txt
+	LIBGL_ALWAYS_SOFTWARE=1 $(CMD) ../data/data_base.txt
 
 clean:
 	rm -f main.o tree.o file_data.o akinator_game.o $(CMD)

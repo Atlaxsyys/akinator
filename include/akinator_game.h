@@ -23,3 +23,7 @@ Tree_errors compare_nodes(Node_t* root);
 Tree_errors verify_nodes(Node_t* root, Node_t** first_node, Node_t** second_node, char first_elem[], char second_elem[]);
 Tree_errors output_unique_features(Node_t* root, int common_part, char first_elem[], Path path);
 Tree_errors output_common_features(int common_part, Path path);
+void renderAkinator(sf::RenderWindow &window, Node_t* &currentNode, sf::Font &font);
+void renderMenu(sf::RenderWindow &window, sf::Font &font, int &selectedOption);
+void show_data_base();
+void renderCompareNodes(sf::RenderWindow& window, Node_t* root, sf::Font& font);
