@@ -6,6 +6,7 @@ const int MAX_PATH_SIZE     = 50;
 const int SIZE_DOT_FILENAME = 60;
 const int SIZE_PNG_FILENAME = 60;
 const int SIZE_COMMAND      = 120;
+const int SIZE_FILENAME     = 20;
 
 typedef struct Node_t {
     elem_t data;
@@ -35,3 +36,4 @@ Node_t* delete_node(Node_t* root, elem_t value);
 Tree_errors traverse(Node_t* root);
 Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size_t number_of_string);
 Tree_errors saveTree(Node_t* node, FILE *file);
+char* remove_question_mark(char* str);

@@ -20,4 +20,6 @@ prodva?
 danchik
 dima
 xyi
+small?
+mouse
 poltorashka

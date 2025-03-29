@@ -17,13 +17,10 @@ enum akinator_menu
 Tree_errors akinator(Node_t* root);
 Tree_errors add_new_node(Node_t* current);
 Tree_errors game(Node_t* root);
-void menu(Node_t* root, const char* argv[]);
+void menu(Node_t* root, const char* FILENAME_DATA_BASE);
 Tree_errors build_path(Node_t* root, Node_t* node, Path* pth);
 Tree_errors compare_nodes(Node_t* root);
 Tree_errors verify_nodes(Node_t* root, Node_t** first_node, Node_t** second_node, char first_elem[], char second_elem[]);
 Tree_errors output_unique_features(Node_t* root, int common_part, char first_elem[], Path path);
 Tree_errors output_common_features(int common_part, Path path);
-void renderAkinator(sf::RenderWindow &window, Node_t* &currentNode, sf::Font &font);
-void renderMenu(sf::RenderWindow &window, sf::Font &font, int &selectedOption);
-void show_data_base();
-void renderCompareNodes(sf::RenderWindow& window, Node_t* root, sf::Font& font);
+Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE);

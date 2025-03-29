@@ -3,7 +3,7 @@ FLAGS = -DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-op
 CC = g++
 CMD = ./tree.exe
 INCLUDE = -I../include
-CPPSRC = akinator_game.cpp file_data.cpp tree.cpp main.cpp
+CPPSRC = akinator_game.cpp file_data.cpp tree.cpp main.cpp akinator_game_graphic.cpp
 
 CPPOBJ = $(CPPSRC:%.cpp=%.o)
 
@@ -17,4 +17,4 @@ run: build
 	LIBGL_ALWAYS_SOFTWARE=1 $(CMD) ../data/data_base.txt
 
 clean:
-	rm -f main.o tree.o file_data.o akinator_game.o $(CMD)
+	rm -f main.o tree.o file_data.o akinator_game.o akinator_game_graphic.o $(CMD)
