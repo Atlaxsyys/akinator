@@ -12,8 +12,13 @@
     #define ON_DEBUG(...)
 #endif
 
+char* remove_question_mark(char* str);
+void show_data_base();
+
 Tree_errors akinator(Node_t* root)
 {
+    assert(root);
+
     Node_t* current = root;
 
     char answer[SIZE_ANSWER] = {};
@@ -94,6 +99,7 @@ Tree_errors add_new_node(Node_t* current)
     new_answer[strlen(new_answer) - 1] = '\0';
 
     fprintf(stderr, YELLOW_TEXT("Which question differs %s from %s"), new_answer, current->data);
+
     fgets(new_question, sizeof(new_question), stdin);
 
     new_question[strlen(new_question) - 1] = '\0';
@@ -145,14 +151,7 @@ void menu(Node_t* root, const char* argv[])
 
             case COMPARE_NODES:
             {
-                fprintf(stderr, "enter two elements to compare\n");
-
-                char first_elem[SIZE_ANSWER]  = {};
-                char second_elem[SIZE_ANSWER] = {};
-
-                scanf("%s %s", first_elem, second_elem);
-
-                compare_nodes(root, first_elem, second_elem);
+                compare_nodes(root);
 
                 break;
             }
@@ -196,7 +195,7 @@ Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
 
     if (root == node)   { return SUCCESS; }
 
-    fprintf (stderr, "node = [%p]\nroot = [%p]\n", node, root);
+    ON_DEBUG( fprintf (stderr, "node = [%p]\nroot = [%p]\n", node, root); )
     Node_t* next_node = search_node (root->left, node->data);
 
     if (next_node)
@@ -220,18 +219,47 @@ Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
     return SUCCESS;
 }
 
-Tree_errors compare_nodes(Node_t* root, char* first_data, char* second_data)
+char* remove_question_mark(char* str)
 {
-    Node_t* first_node = search_node(root,  first_data);
+    assert(str);
 
-    Node_t* second_node = search_node(root, second_data);
+    size_t len = strlen(str);
+    
+    if (len > 0 && str[len-1] == '?')
+    {
+        str[len-1] = '\0';
+    }
 
+    return str;
+};
+
+Tree_errors compare_nodes(Node_t* root)
+{
+    assert(root);
+
+    Node_t* first_node = nullptr;
+    Node_t* second_node = nullptr;
+
+    char first_elem[SIZE_ANSWER]  = {};
+    char second_elem[SIZE_ANSWER] = {};
+
+    verify_nodes(root, &first_node, &second_node, first_elem, second_elem);
 
     Path first_path  = {};
     Path second_path = {};
 
     build_path(root, first_node,  &first_path );
     build_path(root, second_node, &second_path);
+
+    ON_DEBUG( (int i = 0; i < first_path.number_of_nodes; i++)
+    {
+        fprintf(stderr, YELLOW_TEXT("first_path: %s\n"), first_path.path[i]);
+    }
+
+    for (int i = 0; i < second_path.number_of_nodes; i++)
+    {
+        fprintf(stderr, YELLOW_TEXT("second_path: %s\n"), second_path.path[i]);
+    })
 
     int common_part = 0;
 
@@ -243,29 +271,99 @@ Tree_errors compare_nodes(Node_t* root, char* first_data, char* second_data)
               common_part++;
           }
 
-    if (common_part > 0)
-    {
-        fprintf(stderr, "common characteristic: \n");
+    output_common_features(common_part, first_path);
 
-        for (int i = 0; i < common_part; i++)   { fprintf(stderr, "- %s\n", first_path.path[i]); }
-    }
-
-    if (common_part < first_path.number_of_nodes)
-    {
-        fprintf(stderr, "unique to %s:\n", first_data);
-
-        for (int i = common_part; i < first_path.number_of_nodes; i++)   { fprintf(stderr, "- %s\n", first_path.path[i]); }
-    }
-
-    if (common_part < second_path.number_of_nodes)
-    {
-        fprintf(stderr, "unique to %s:\n", second_data);
-
-        for (int i = common_part; i < second_path.number_of_nodes; i++)   { fprintf(stderr, "- %s\n", second_path.path[i]); }
-    }
+    output_unique_features(root, common_part, first_elem, first_path);
+    output_unique_features(root, common_part, second_elem, second_path);
 
     for (int i = 0; i < first_path.number_of_nodes ; i++) free(first_path.path[i] );
     for (int i = 0; i < second_path.number_of_nodes; i++) free(second_path.path[i]);
+
+    return SUCCESS;
+}
+
+Tree_errors verify_nodes(Node_t* root, Node_t** first_node, Node_t** second_node, char first_elem[], char second_elem[])
+{
+
+    do {
+        fprintf(stderr, "enter first element: ");
+
+        scanf("%s", first_elem);
+
+        (*first_node) = search_node(root, first_elem);
+
+        if ((*first_node) == nullptr) { fprintf(stderr, "Element '%s' not found. Please, try again.\n", first_elem); }
+
+    } while ((*first_node) == nullptr);
+
+    do {
+        fprintf(stderr, "enter second element: ");
+
+        scanf("%s", second_elem);
+
+        (*second_node) = search_node(root, second_elem);
+
+        if ((*second_node) == nullptr)  { fprintf(stderr, "Element '%s' not found. Please, try again.\n", second_elem); }
+
+    } while ((*second_node) == nullptr);
+
+    return SUCCESS;
+}
+
+Tree_errors output_unique_features(Node_t* root, int common_part, char first_elem[], Path path)
+{
+    assert(root);
+
+    if (common_part < path.number_of_nodes)
+    {
+        fprintf(stderr, "unique to %s:\n", first_elem);
+
+        for (int i = common_part; i < path.number_of_nodes; i++)
+        {
+            if (i > 0)
+            {
+
+                Node_t* parent = search_node(root, path.path[i - 1]);
+
+              ON_DEBUG( if(parent && parent->right)
+                    fprintf(stderr, PURPLE_TEXT("parent->data: %s parent->right->data: %s first_path.path[%d]: %s\n"), parent->data, parent->right->data, i, first_path.path[i]); )
+
+                if (parent && parent->right && strcmp(parent->right->data, path.path[i]) == 0)
+                {
+                   ON_DEBUG(fprintf(stderr, GREEN_TEXT("parent->data: %s parent->right->data: %s first_path.path[%d]: %s\n"), parent->data, parent->right->data, i, first_path.path[i]); )
+
+                    fprintf(stderr, "- No %s\n",remove_question_mark( path.path[i - 1]));
+                }
+                else
+                {
+                    fprintf(stderr, "- %s\n",remove_question_mark( path.path[i - 1]));
+                }
+            }
+            
+        }
+    }
+
+    return SUCCESS;
+}
+
+Tree_errors output_common_features(int common_part, Path path)
+{
+    
+    fprintf(stderr, "common features: \n");
+
+    if (common_part == 1)
+    {
+        fprintf(stderr, "nothing\n");
+    }
+
+    if (common_part > 0)
+    {
+
+        for (int i = 1; i < common_part; i++)
+        {
+            fprintf(stderr, "- %s\n",remove_question_mark( path.path[i]));
+        }
+    }
 
     return SUCCESS;
 }

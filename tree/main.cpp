@@ -23,8 +23,8 @@ int main(const int argc, const char* argv[])
         return 1;
     }
 
-    char* text_buffer   = create_buffer(file_read);
-    long size_file = size_text_file(file_read);
+    char* text_buffer       = create_buffer(file_read);
+    long size_file          = size_text_file(file_read);
     size_t number_of_string = n_string(text_buffer, size_file);
 
     char** string_buffer = create_string_buffer(text_buffer, file_read);

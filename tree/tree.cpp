@@ -73,6 +73,8 @@ Tree_errors free_tree(Node_t** node)
 
 Tree_errors dump_tree(Node_t* root, FILE* file)
 {
+    assert(root);
+    
     if(root) fprintf(file, "    \"%p\" [shape=Mrecord, style=filled; fillcolor=\"#F0C0F0\"; label=\"{data: %s | current: %p | { Left: %p | Right: %p } }\"];\n", root, root->data, root, root->left, root->right);
 
     if (root->left)
@@ -92,6 +94,8 @@ Tree_errors dump_tree(Node_t* root, FILE* file)
 
 Tree_errors generate_dot(Node_t* root)
 {
+    assert(root);
+
     static int file_counter = 0;
 
     char* dot_filename = (char*) calloc(SIZE_DOT_FILENAME, sizeof(char));
