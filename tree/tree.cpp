@@ -92,7 +92,7 @@ Tree_errors dump_tree(Node_t* root, FILE* file)
     return SUCCESS;
 }
 
-Tree_errors generate_dot(Node_t* root)
+int generate_dot(Node_t* root)
 {
     assert(root);
 
@@ -125,7 +125,7 @@ Tree_errors generate_dot(Node_t* root)
     free(png_filename);
     free(command);
 
-    return SUCCESS;
+    return (file_counter - 1);
 }
 
 Node_t* delete_node(Node_t* root, elem_t data)

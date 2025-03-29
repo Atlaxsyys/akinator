@@ -12,7 +12,7 @@
     #define ON_DEBUG(...)
 #endif
 
-void show_data_base();
+void show_data_base(Node_t* root);
 
 Tree_errors akinator(Node_t* root)
 {
@@ -70,6 +70,8 @@ Tree_errors akinator(Node_t* root)
 
 Tree_errors game(Node_t* root)
 {
+    assert(root);
+
     char play_again[SIZE_ANSWER] = {};
 
     do
@@ -148,7 +150,7 @@ void menu(Node_t* root, const char* FILENAME_DATA_BASE)
 
             case SHOW_DATA_BASE:
             {
-                show_data_base();
+                show_data_base(root);
                 break;
             }
 
@@ -195,9 +197,15 @@ Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE)
     return SUCCESS;
 }
 
-void show_data_base()
+void show_data_base(Node_t* root)
 {
-    system("wslview ../graph_dump/graph_0.png");
+    int number_of_file = generate_dot(root);
+    
+    char command[256] = {};
+    
+    snprintf(command, sizeof(command), "wslview ../graph_dump/graph_%d.png", number_of_file);
+    
+    system(command);
 }
 
 Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)

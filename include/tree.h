@@ -31,7 +31,7 @@ Tree_errors insert_node(Node_t** root, elem_t value);
 Node_t* search_node(Node_t* root, elem_t value);
 Tree_errors free_tree(Node_t** node);
 Tree_errors dump_tree(Node_t* root, FILE* file);
-Tree_errors generate_dot(Node_t* root);
+int generate_dot(Node_t* root);
 Node_t* delete_node(Node_t* root, elem_t value);
 Tree_errors traverse(Node_t* root);
 Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size_t number_of_string);

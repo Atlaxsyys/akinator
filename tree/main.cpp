@@ -63,7 +63,7 @@ int main(const int argc, const char* argv[])
             }
             case SHOW_DATA_BASE:
             {
-                show_data_base();
+                // show_data_base();
                 break;
             }
             case COMPARE_NODES:
