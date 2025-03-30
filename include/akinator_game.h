@@ -1,6 +1,7 @@
 #pragma once
 
 #include "tree.h"
+#include "errors.h"
 
 const int SIZE_ANSWER = 20;
 const int SIZE_QUESTION = 20; 

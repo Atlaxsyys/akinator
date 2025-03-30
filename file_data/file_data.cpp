@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "file_data.h"
+#include "errors.h"
 
 long size_text_file(FILE* file_read)
 {
@@ -21,8 +22,19 @@ char* create_buffer(FILE* file_read)
     long size_file = size_text_file(file_read);
 
     char* text_buffer = (char*) calloc((size_t) size_file + 1, sizeof(char));
+    
+    if(! text_buffer)
+    {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR)
+    }
 
-    fread(text_buffer, sizeof(char), (size_t) size_file + 1, file_read);
+    size_t number_of_reads = fread(text_buffer, sizeof(char), (size_t) size_file + 1, file_read);
+
+    if (number_of_reads != (size_t) size_file)
+    {
+        ERROR_MESSAGE(FREAD_ERR)
+    }
+
     rewind(file_read);
 
     return text_buffer;
@@ -54,6 +66,11 @@ char** create_string_buffer(char* text_buffer, FILE* file_read)
     size_t number_of_lines = n_string(text_buffer, size_file);
 
     char** string_buffer = (char**) calloc(number_of_lines + 1, sizeof(char*));
+
+    if(! string_buffer)
+    {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR)
+    }
 
     int line_number = 1;
     

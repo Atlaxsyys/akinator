@@ -17,9 +17,20 @@ Node_t* create_node(elem_t data)
 {
     Node_t* node = (Node_t*) calloc(1, sizeof(Node_t));
 
-    if (node == nullptr)   { return nullptr; }
+    if (! node)
+    {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR)
+
+        return nullptr; 
+    }
 
     node->data = strdup(data);
+
+    if(! node->data)
+    {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR)
+    }
+
     node->left = nullptr;
     node->right = nullptr;
 
@@ -99,13 +110,26 @@ int generate_dot(Node_t* root)
     static int file_counter = 0;
 
     char* dot_filename = (char*) calloc(SIZE_DOT_FILENAME, sizeof(char));
+
+    if (! dot_filename) { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+
     char* png_filename = (char*) calloc(SIZE_PNG_FILENAME, sizeof(char));
+
+    if(! png_filename) { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+
     char* command      = (char*) calloc(SIZE_COMMAND,      sizeof(char));
+
+    if(! command)      { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
     sprintf(dot_filename, "../graph_dump/graph_%d.dot", file_counter);
     sprintf(png_filename, "../graph_dump/graph_%d.png", file_counter);
 
     FILE* file = fopen(dot_filename, "w");
+
+    if(! file)
+    {
+        ERROR_MESSAGE(FILE_OPEN_ERR)
+    }
     
     fprintf(file, "digraph BinaryTree {\n");
     fprintf(file, "    bgcolor=\"#C0C0C0\";\n\n");
@@ -114,7 +138,12 @@ int generate_dot(Node_t* root)
     dump_tree(root, file);
     
     fprintf(file, "}\n");
-    fclose(file);
+
+
+    if(fclose(file) != 0)
+    {
+        ERROR_MESSAGE(FILE_CLOSE_ERR)
+    }
 
     sprintf(command, "dot -Tpng %s -o %s", dot_filename, png_filename);
     system(command);    
@@ -126,30 +155,6 @@ int generate_dot(Node_t* root)
     free(command);
 
     return (file_counter - 1);
-}
-
-Node_t* delete_node(Node_t* root, elem_t data)
-{
-    if (!root) { return nullptr; }
-    
-    if (strcmp(data, root->data) < 0)
-    {
-        root->left = delete_node(root->left, data);
-    }
-
-    else if (strcmp(data, root->data) > 0)
-    {
-        root->right = delete_node(root->right, data);
-    }
-
-    else 
-    {
-        free_tree(&root);
-
-        return nullptr;
-    }
-
-    return root;
 }
 
 Tree_errors traverse(Node_t* root)

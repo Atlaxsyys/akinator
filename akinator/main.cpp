@@ -44,7 +44,14 @@ int main(const int argc, const char* argv[])
 
     Node_t* root = nullptr;
 
-    root = build_tree(root, string_buffer, &line_number, number_of_string); 
+    root = build_tree(root, string_buffer, &line_number, number_of_string);
+
+    if(! root)
+    {
+        ERROR_MESSAGE(NULLPTR_ERR)
+        
+        return NULLPTR_ERR;
+    }
 
     generate_dot(root);
 

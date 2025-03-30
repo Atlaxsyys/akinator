@@ -5,6 +5,7 @@
 
 #include "colour.h"
 #include "akinator_game.h"
+#include "errors.h"
 
 #ifdef DEBUG_AKINATOR
     #define ON_DEBUG(...) __VA_ARGS__
@@ -183,12 +184,15 @@ Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE)
 
     if (! file_write)
     {
-        perror(RED_TEXT("Error: File 'datab_ase.txt' NOT opened"));
+        ERROR_MESSAGE(FILE_OPEN_ERR)
     }
 
     saveTree(root, file_write);
 
-    fclose(file_write);
+    if (fclose(file_write) != 0)
+    {
+        ERROR_MESSAGE(FILE_CLOSE_ERR)
+    }
 
     fprintf(stderr, PURPLE_TEXT("Exit - new data_base saved, goodbye bro!\n"));
 
