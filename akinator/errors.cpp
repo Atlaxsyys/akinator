@@ -10,6 +10,8 @@ const char* errors_messenger(Tree_errors status)
         case      NULLPTR_ERR: return "NULL POINTER";
         case MEMORY_ALLOC_ERR: return "MEMORY ALLOCATION ERROR";
         case        FREAD_ERR: return "FREAD ERROR: Not fully read";
+        case     SNPRINTF_ERR: return "SNPRINTF ERROR";
+        case        FGETS_ERR: return "FGETS ERROR";
 
         default:               return "UNKNOWN ERROR";
     }

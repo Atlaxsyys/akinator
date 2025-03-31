@@ -11,7 +11,10 @@ enum Tree_errors
     FILE_OPEN_ERR    = 2,
     FILE_CLOSE_ERR   = 3,
     FREAD_ERR        = 4,
-    NULLPTR_ERR      = 5
+    NULLPTR_ERR      = 5,
+    SNPRINTF_ERR     = 6,
+    NOT_ENOUGH_ARGC  = 7,
+    FGETS_ERR        = 8
 };
 
 const char* errors_messenger(Tree_errors status);

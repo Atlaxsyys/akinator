@@ -121,8 +121,11 @@ int generate_dot(Node_t* root)
 
     if(! command)      { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
-    sprintf(dot_filename, "../graph_dump/graph_%d.dot", file_counter);
-    sprintf(png_filename, "../graph_dump/graph_%d.png", file_counter);
+    int written_first = snprintf(dot_filename, SIZE_DOT_FILENAME, "../graph_dump/graph_%d.dot", file_counter);
+    int written_second = snprintf(png_filename, SIZE_PNG_FILENAME, "../graph_dump/graph_%d.png", file_counter);
+
+    if (written_first <  0) ERROR_MESSAGE(SNPRINTF_ERR)
+    if (written_second < 0) ERROR_MESSAGE(SNPRINTF_ERR)
 
     FILE* file = fopen(dot_filename, "w");
 
@@ -139,13 +142,15 @@ int generate_dot(Node_t* root)
     
     fprintf(file, "}\n");
 
-
     if(fclose(file) != 0)
     {
         ERROR_MESSAGE(FILE_CLOSE_ERR)
     }
 
-    sprintf(command, "dot -Tpng %s -o %s", dot_filename, png_filename);
+    int written_third = snprintf(command, SIZE_COMMAND, "dot -Tpng %s -o %s", dot_filename, png_filename);
+
+    if (written_third < 0) ERROR_MESSAGE(SNPRINTF_ERR)
+
     system(command);    
 
     file_counter++;
