@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #include "file_data.h"
 #include "errors.h"
@@ -82,6 +83,7 @@ char** create_string_buffer(char* text_buffer, FILE* file_read)
         {
             text_buffer[i] = '\0';
             string_buffer[line_number] = &(text_buffer[i + 1]);
+
             line_number++;
         }
     }

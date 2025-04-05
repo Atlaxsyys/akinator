@@ -56,8 +56,17 @@ Tree_errors akinator(Node_t* root)
             if (current->right == nullptr)
             {
                 fprintf(stderr, PURPLE_TEXT("I dont know what it is.\nYou want add new element? (y/n): "));
-
                 scanf("%1s", answer);
+
+                while(strcmp(answer, "y") != 0 && strcmp(answer, "n") != 0)
+                {
+                    fprintf(stderr, RED_TEXT("Please, enter y or n\n"));
+                    
+                    clean_buffer();
+
+                    fprintf(stderr, PURPLE_TEXT("You want add new element? (y/n): "));
+                    scanf("%1s", answer);
+                }
 
                 clean_buffer();
 
@@ -88,26 +97,21 @@ Tree_errors add_new_node(Node_t* current)
     char new_answer[SIZE_ANSWER]     = {};
     char new_question[SIZE_QUESTION] = {}; 
 
-    fprintf(stderr, YELLOW_TEXT("What word did you wish for?"));
-
-    getchar();
+    fprintf(stderr, YELLOW_TEXT("What word did you wish for?: "));
 
     char* fgets_err_first = fgets(new_answer, sizeof(new_answer), stdin);
-
     if(! fgets_err_first)   ERROR_MESSAGE(FGETS_ERR)
 
     new_answer[strlen(new_answer) - 1] = '\0';
 
-    fprintf(stderr, YELLOW_TEXT("Which question differs %s from %s"), new_answer, current->data);
+    fprintf(stderr, YELLOW_TEXT("Which question differs %s from %s: "), new_answer, current->data);
 
     char* fgets_err_second = fgets(new_question, sizeof(new_question), stdin);
-
     if (! fgets_err_second)    ERROR_MESSAGE(FGETS_ERR)
 
     new_question[strlen(new_question) - 1] = '\0';
 
     char* old_answer = strdup(current->data);
-
     if (! old_answer)   ERROR_MESSAGE(NULLPTR_ERR)
 
     free(current->data);
@@ -124,9 +128,9 @@ Tree_errors add_new_node(Node_t* current)
     return SUCCESS;
 }
 
-void menu(Node_t* root, const char* FILENAME_DATA_BASE) //FIXME - 
+void menu(Node_t* root, const char* filename_data_base)
 {
-    assert(FILENAME_DATA_BASE);
+    assert(filename_data_base);
     assert(root);
 
     int choise = 0;
@@ -167,7 +171,7 @@ void menu(Node_t* root, const char* FILENAME_DATA_BASE) //FIXME -
 
             case EXIT_WITH_SAVING:
             {
-                exit_with_saving(root, FILENAME_DATA_BASE);
+                exit_with_saving(root, filename_data_base);
                 break;
             }
 
@@ -185,7 +189,7 @@ void menu(Node_t* root, const char* FILENAME_DATA_BASE) //FIXME -
     } while (choise != EXIT_WITH_SAVING && choise != EXIT_WITHOUT_SAVING);
 }
 
-Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE)
+Tree_errors exit_with_saving(Node_t* root, const char* FILENAME_DATA_BASE)
 {
     assert(root);
 
@@ -209,7 +213,6 @@ void show_data_base(Node_t* root)
     char command[SIZE_DOT_FILENAME] = {};
     
     int written = snprintf(command, sizeof(command), "wslview ../graph_dump/graph_%d.png", number_of_file);
-
     if (written < 0)    ERROR_MESSAGE(SNPRINTF_ERR)
     
     system(command);
@@ -220,7 +223,6 @@ Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
     assert(root);
 
     pth->path[pth->number_of_nodes] = strdup(root->data);
-
     if(! pth->path[pth->number_of_nodes])   ERROR_MESSAGE(NULLPTR_ERR)
 
     pth->number_of_nodes++; 
@@ -258,9 +260,9 @@ char* remove_question_mark(char* str)
 
     size_t len = strlen(str);
     
-    if (len > 0 && str[len-1] == '?')
+    if (len > 0 && str[len - 1] == '?')
     {
-        str[len-1] = '\0';
+        str[len - 1] = '\0';
     }
 
     return str;
@@ -329,8 +331,8 @@ int get_common_part(Path first_path, Path second_path)
 {
     int common_part = 0;
 
-    while (common_part < first_path.number_of_nodes &&
-          common_part < second_path.number_of_nodes &&
+    while (common_part < first_path.number_of_nodes  &&
+           common_part < second_path.number_of_nodes &&
           strcmp(first_path.path[common_part], second_path.path[common_part]) == 0)
           {
               common_part++;

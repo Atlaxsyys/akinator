@@ -49,9 +49,9 @@ int main(const int argc, const char* argv[])
 
     generate_dot(root); //REVIEW - 
 
-    const char* FILENAME_DATA_BASE = argv[1];
+    const char* filename_data_base = argv[1];
 
-    menu(root, FILENAME_DATA_BASE);
+    menu(root, filename_data_base);
 
     generate_dot(root);
     

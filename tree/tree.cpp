@@ -86,8 +86,20 @@ Tree_errors dump_tree(Node_t* root, FILE* file)
 {
     assert(root);
     
-    if(root) fprintf(file, "    \"%p\" [shape=Mrecord, style=filled; fillcolor=\"#F0C0F0\"; label=\"{data: %s | current: %p | { Left: %p | Right: %p } }\"];\n", root, root->data, root, root->left, root->right);
-
+    if (root) 
+    fprintf(file, 
+            "    \"%p\" [shape=Mrecord, style=filled; fillcolor=\"#F0C0F0\"; label=\"{"
+            "data: %s | "
+            "current: %p | "
+            "{ Left: %p | "
+            "Right: %p }"
+            "}\"];\n",
+            root, 
+            root->data, 
+            root, 
+            root->left, 
+            root->right);
+            
     if (root->left)
     {
         fprintf(file, "    \"%p\" -> \"%p\";\n", root, root->left);
@@ -110,18 +122,18 @@ int generate_dot(Node_t* root)
     static int file_counter = 0;
 
     char* dot_filename = (char*) calloc(SIZE_DOT_FILENAME, sizeof(char));
-
-    if (! dot_filename) { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+    if (! dot_filename) {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
     char* png_filename = (char*) calloc(SIZE_PNG_FILENAME, sizeof(char));
-
-    if(! png_filename) { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+    if(! png_filename) {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
     char* command      = (char*) calloc(SIZE_COMMAND,      sizeof(char));
+    if(! command) {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
-    if(! command)      { ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
-
-    int written_first = snprintf(dot_filename, SIZE_DOT_FILENAME, "../graph_dump/graph_%d.dot", file_counter);
+    int written_first  = snprintf(dot_filename, SIZE_DOT_FILENAME, "../graph_dump/graph_%d.dot", file_counter);
     int written_second = snprintf(png_filename, SIZE_PNG_FILENAME, "../graph_dump/graph_%d.png", file_counter);
 
     if (written_first <  0) ERROR_MESSAGE(SNPRINTF_ERR)
