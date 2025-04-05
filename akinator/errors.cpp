@@ -1,6 +1,6 @@
 #include "errors.h"
 
-const char* errors_messenger(Tree_errors status)
+const char* errors_messenger(Tree_errors status) //REVIEW - QUESTION TO VOVA ABOUT RETURN
 {
     switch(status)
     {
@@ -15,5 +15,4 @@ const char* errors_messenger(Tree_errors status)
 
         default:               return "UNKNOWN ERROR";
     }
-
 }

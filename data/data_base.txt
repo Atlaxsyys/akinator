@@ -1,25 +1,26 @@
 Prepod?
-semer?
-matan?
-zagr_mamont
-linal?
-anechka
-physics?
-Kholin
-legendary?
-Kuliev
-Teorver?
-Shtepin
-freak
-livanov
-student?
-live in 209?
-square head?
-damir
-prodva?
-danchik
-dima
-xyi
-small?
-mouse
-poltorashka
+    semer?
+        matan?
+            lector?
+                znamka
+                zagr_mamont
+            linal?
+                anechka
+                physics?
+                    kholin
+                    LEGENDARY?
+                        kuliev
+                        teorver?
+                            SHTEPIN
+                            freak
+        livanov
+    student?
+        live in 209?
+            square head?
+                damir
+                prodva?
+                    anchik
+                    dima
+            xyi
+        small?
+            mouse

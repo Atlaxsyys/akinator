@@ -29,5 +29,5 @@ Tree_errors dump_tree(Node_t* root, FILE* file);
 int generate_dot(Node_t* root);
 Tree_errors traverse(Node_t* root);
 Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size_t number_of_string);
-Tree_errors saveTree(Node_t* node, FILE *file);
+Tree_errors saveTree(Node_t* root, FILE *file, int level);
 char* remove_question_mark(char* str);

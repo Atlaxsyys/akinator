@@ -15,6 +15,9 @@
 
 void show_data_base(Node_t* root);
 void clean_buffer();
+void game_mode(Node_t* root, const char* filename_data_base, int choise);
+void output_definition(Node_t* root, Path path, char data[]);
+Tree_errors definition_node(Node_t* root);
 
 void clean_buffer()
 {
@@ -100,25 +103,29 @@ Tree_errors add_new_node(Node_t* current)
     fprintf(stderr, YELLOW_TEXT("What word did you wish for?: "));
 
     char* fgets_err_first = fgets(new_answer, sizeof(new_answer), stdin);
-    if(! fgets_err_first)   ERROR_MESSAGE(FGETS_ERR)
+    if(! fgets_err_first) {
+        ERROR_MESSAGE(FGETS_ERR) }
 
     new_answer[strlen(new_answer) - 1] = '\0';
 
     fprintf(stderr, YELLOW_TEXT("Which question differs %s from %s: "), new_answer, current->data);
 
     char* fgets_err_second = fgets(new_question, sizeof(new_question), stdin);
-    if (! fgets_err_second)    ERROR_MESSAGE(FGETS_ERR)
+    if (! fgets_err_second) {
+        ERROR_MESSAGE(FGETS_ERR) }
 
     new_question[strlen(new_question) - 1] = '\0';
 
     char* old_answer = strdup(current->data);
-    if (! old_answer)   ERROR_MESSAGE(NULLPTR_ERR)
+    if (! old_answer) {
+        ERROR_MESSAGE(NULLPTR_ERR) }
 
     free(current->data);
 
     current->data = strdup(new_question);
 
-    if (! current->data)    ERROR_MESSAGE(NULLPTR_ERR)
+    if (! current->data) {
+        ERROR_MESSAGE(NULLPTR_ERR) }
 
     current->left  = create_node(new_answer);
     current->right = create_node(old_answer);
@@ -140,6 +147,7 @@ void menu(Node_t* root, const char* filename_data_base)
         fprintf(stderr, PURPLE_TEXT("------ Welcome to the Akinator game ------\n"));
         fprintf(stderr, GREEN_TEXT("%d. Play\n"), PLAY);
         fprintf(stderr, GREEN_TEXT("%d. Show data_base\n"), SHOW_DATA_BASE);
+        fprintf(stderr, GREEN_TEXT("%d. definition\n"), DEFINITION);
         fprintf(stderr, GREEN_TEXT("%d. Compare_elements\n"), COMPARE_NODES);
         fprintf(stderr, GREEN_TEXT("%d. Exit with saving\n"), EXIT_WITH_SAVING);
         fprintf(stderr, GREEN_TEXT("%d. Exit without saving\n"), EXIT_WITHOUT_SAVING);
@@ -149,8 +157,18 @@ void menu(Node_t* root, const char* filename_data_base)
         
         clean_buffer();
 
-        switch (choise)
-        {
+        game_mode(root, filename_data_base, choise);
+
+    } while (choise != EXIT_WITH_SAVING && choise != EXIT_WITHOUT_SAVING);
+}
+
+void game_mode(Node_t* root, const char* filename_data_base, int choise)
+{
+    assert(root);
+    assert(filename_data_base);
+
+    switch (choise)
+        { 
             case PLAY:
             {
                 akinator(root);
@@ -160,6 +178,12 @@ void menu(Node_t* root, const char* filename_data_base)
             case SHOW_DATA_BASE:
             {
                 show_data_base(root);
+                break;
+            }
+
+            case DEFINITION:
+            {
+                definition_node(root);
                 break;
             }
 
@@ -182,11 +206,8 @@ void menu(Node_t* root, const char* filename_data_base)
             }
 
             default:
-                fprintf(stderr, RED_TEXT("___Unknown command___\n\n"));
-                
+                fprintf(stderr, RED_TEXT("___Unknown command___\n\n"));   
         }
-
-    } while (choise != EXIT_WITH_SAVING && choise != EXIT_WITHOUT_SAVING);
 }
 
 Tree_errors exit_with_saving(Node_t* root, const char* FILENAME_DATA_BASE)
@@ -194,12 +215,14 @@ Tree_errors exit_with_saving(Node_t* root, const char* FILENAME_DATA_BASE)
     assert(root);
 
     FILE* file_write = fopen(FILENAME_DATA_BASE, "wb");
+    if (! file_write) { 
+        ERROR_MESSAGE(FILE_OPEN_ERR) }
+    
+    int level = 0;
+    saveTree(root, file_write, level);
 
-    if (! file_write)   ERROR_MESSAGE(FILE_OPEN_ERR)
-
-    saveTree(root, file_write);
-
-    if (fclose(file_write) != 0)    ERROR_MESSAGE(FILE_CLOSE_ERR)
+    if (fclose(file_write) != 0) {
+        ERROR_MESSAGE(FILE_CLOSE_ERR) }
 
     fprintf(stderr, PURPLE_TEXT("Exit - new data_base saved, goodbye bro!\n"));
 
@@ -213,7 +236,8 @@ void show_data_base(Node_t* root)
     char command[SIZE_DOT_FILENAME] = {};
     
     int written = snprintf(command, sizeof(command), "wslview ../graph_dump/graph_%d.png", number_of_file);
-    if (written < 0)    ERROR_MESSAGE(SNPRINTF_ERR)
+    if (written < 0) {
+        ERROR_MESSAGE(SNPRINTF_ERR) }
     
     system(command);
 }
@@ -223,7 +247,8 @@ Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
     assert(root);
 
     pth->path[pth->number_of_nodes] = strdup(root->data);
-    if(! pth->path[pth->number_of_nodes])   ERROR_MESSAGE(NULLPTR_ERR)
+    if(! pth->path[pth->number_of_nodes]) {
+        ERROR_MESSAGE(NULLPTR_ERR) }
 
     pth->number_of_nodes++; 
 
@@ -268,6 +293,51 @@ char* remove_question_mark(char* str)
     return str;
 };
 
+Tree_errors definition_node(Node_t* root)
+{
+    assert(root);
+
+    Node_t* node = nullptr;
+
+    char data[SIZE_ANSWER] = {};
+
+    check_node_exists(root, &node, nullptr, data);
+
+    Path path = {};
+
+    build_path(root, node, &path);
+
+    output_definition(root, path, data);
+
+    for (int i = 0; i < path.number_of_nodes ; i++) free(path.path[i] );
+
+    return SUCCESS;
+}
+
+void output_definition(Node_t* root, Path path, char data[])
+{
+    assert(root);
+    assert(data);
+
+    for (int i = 0; i < path.number_of_nodes; i++)
+    {
+        if (i > 0)
+        {
+            Node_t* parent = search_node(root, path.path[i - 1]);
+
+            if (parent && parent->right && strcmp(parent->right->data, path.path[i]) == 0)
+            {
+                fprintf(stderr, LIGHT_BLUE_TEXT("- No %s\n"), remove_question_mark( path.path[i - 1]));
+            }
+            
+            else
+            {
+                fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"), remove_question_mark( path.path[i - 1]));
+            }
+        }
+    }
+}
+
 Tree_errors compare_nodes(Node_t* root)
 {
     assert(root);
@@ -307,12 +377,12 @@ Tree_errors check_node_exists(Node_t* root, Node_t** node, const char* promts, c
 {
     assert(root);
     assert(node);
-    assert(promts);
     assert(elem);
 
     do
     {
-        fprintf(stderr, YELLOW_TEXT("enter %s element: "), promts);
+        if (promts == nullptr)   fprintf(stderr, YELLOW_TEXT("enter element: "));
+        else                     fprintf(stderr, YELLOW_TEXT("enter %s element: "), promts);
 
         scanf("%s", elem);
 
@@ -361,12 +431,12 @@ Tree_errors output_unique_features(Node_t* root, int common_part, char first_ele
             {
                 ON_DEBUG(fprintf(stderr, GREEN_TEXT("parent->data: %s parent->right->data: %s first_path.path[%d]: %s\n"), parent->data, parent->right->data, i, first_path.path[i]); )
 
-                fprintf(stderr, LIGHT_BLUE_TEXT("- No %s\n"),remove_question_mark( path.path[i - 1]));
+                fprintf(stderr, LIGHT_BLUE_TEXT("- No %s\n"), remove_question_mark( path.path[i - 1]));
             }
             
             else
             {
-                fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"),remove_question_mark( path.path[i - 1]));
+                fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"), remove_question_mark( path.path[i - 1]));
             }
         }
     }

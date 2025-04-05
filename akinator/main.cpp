@@ -33,8 +33,9 @@ int main(const int argc, const char* argv[])
     size_t number_of_string = n_string(text_buffer, size_file);
 
     char** string_buffer = create_string_buffer(text_buffer, file_read);
-
-    if (fclose(file_read))  ERROR_MESSAGE(FILE_CLOSE_ERR) 
+    
+    if (fclose(file_read)) {
+        ERROR_MESSAGE(FILE_CLOSE_ERR) } 
 
     size_t line_number = 0;
 

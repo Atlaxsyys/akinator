@@ -16,7 +16,6 @@
 Node_t* create_node(elem_t data)
 {
     Node_t* node = (Node_t*) calloc(1, sizeof(Node_t));
-
     if (! node)
     {
         ERROR_MESSAGE(MEMORY_ALLOC_ERR)
@@ -25,11 +24,8 @@ Node_t* create_node(elem_t data)
     }
 
     node->data = strdup(data);
-
-    if(! node->data)
-    {
-        ERROR_MESSAGE(MEMORY_ALLOC_ERR)
-    }
+    if(! node->data) {
+        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
     node->left = nullptr;
     node->right = nullptr;
@@ -99,7 +95,7 @@ Tree_errors dump_tree(Node_t* root, FILE* file)
             root, 
             root->left, 
             root->right);
-            
+
     if (root->left)
     {
         fprintf(file, "    \"%p\" -> \"%p\";\n", root, root->left);
@@ -140,11 +136,8 @@ int generate_dot(Node_t* root)
     if (written_second < 0) ERROR_MESSAGE(SNPRINTF_ERR)
 
     FILE* file = fopen(dot_filename, "w");
-
-    if(! file)
-    {
-        ERROR_MESSAGE(FILE_OPEN_ERR)
-    }
+    if(! file) {
+        ERROR_MESSAGE(FILE_OPEN_ERR) }
     
     fprintf(file, "digraph BinaryTree {\n");
     fprintf(file, "    bgcolor=\"#C0C0C0\";\n\n");
@@ -154,14 +147,12 @@ int generate_dot(Node_t* root)
     
     fprintf(file, "}\n");
 
-    if(fclose(file) != 0)
-    {
-        ERROR_MESSAGE(FILE_CLOSE_ERR)
-    }
+    if(fclose(file) != 0) {
+        ERROR_MESSAGE(FILE_CLOSE_ERR) }
 
     int written_third = snprintf(command, SIZE_COMMAND, "dot -Tpng %s -o %s", dot_filename, png_filename);
-
-    if (written_third < 0) ERROR_MESSAGE(SNPRINTF_ERR)
+    if (written_third < 0) {
+        ERROR_MESSAGE(SNPRINTF_ERR) }
 
     system(command);    
 
@@ -193,30 +184,48 @@ Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size
 
     if (*line_number >= number_of_string) { return nullptr; }
 
-    if(! root)  { root = create_node(string_buffer[*line_number]); }
+    char* current_string = string_buffer[*line_number];
+    while (*current_string == ' ' || *current_string == '\t')
+    {
+        current_string++;
+    }
+
+    if (*current_string == '\0')
+    {
+        (*line_number)++;
+        return build_tree(root, string_buffer, line_number, number_of_string);
+    }
+
+    if (!root) {
+        root = create_node(current_string);
+    }
 
     (*line_number)++;
 
-    if (root->data[strlen(root->data) - 1] == '?')
-    {
+    if (root->data[strlen(root->data) - 1] == '?') {
         root->left  = build_tree(root->left,  string_buffer, line_number, number_of_string);
         root->right = build_tree(root->right, string_buffer, line_number, number_of_string);
     }
 
     return root;
-}   
+}
 
-Tree_errors saveTree(Node_t* root, FILE *file)
+Tree_errors saveTree(Node_t* root, FILE *file, int level)
 {
-    if(! root)
+    if (!root)
     {
         return SUCCESS;
     }
 
+    for (int i = 0; i < level; i++)
+    {
+        fprintf(file, "    ");
+    }
+
     fprintf(file, "%s\n", root->data);
 
-    saveTree(root->left, file);
-    saveTree(root->right, file);
+    saveTree(root->left, file, level + 1);
+    saveTree(root->right, file, level + 1);
 
     return SUCCESS;
 }

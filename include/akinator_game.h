@@ -10,9 +10,10 @@ enum akinator_menu
 {
     PLAY                = 1,
     SHOW_DATA_BASE      = 2,
-    COMPARE_NODES       = 3,
-    EXIT_WITH_SAVING    = 4,
-    EXIT_WITHOUT_SAVING = 5
+    DEFINITION          = 3,
+    COMPARE_NODES       = 4,
+    EXIT_WITH_SAVING    = 5,
+    EXIT_WITHOUT_SAVING = 6
 };
 
 Tree_errors akinator(Node_t* root);
