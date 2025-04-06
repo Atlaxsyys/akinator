@@ -9,9 +9,15 @@
 #include "file_data.h"
 #include "akinator_game.h"
 #include "akinator_game_graphic.h"
+#include "logger.h"
 
 int main(const int argc, const char* argv[])
 {
+    const char* log_filename = "../logger/logger.log";
+    Logger_t* logger = logger_constructor(log_filename, DEBUG);
+
+    logger_destructor(logger);
+
     if (argc != 2)
     {
         fprintf(stderr, "Error: not enough args:\n %s <txt_file>", argv[0]);
@@ -48,13 +54,9 @@ int main(const int argc, const char* argv[])
         return NULLPTR_ERR;
     }
 
-    generate_dot(root); //REVIEW - 
-
     const char* filename_data_base = argv[1];
 
     menu(root, filename_data_base);
-
-    generate_dot(root);
     
     free_tree(&root);
     free(text_buffer);

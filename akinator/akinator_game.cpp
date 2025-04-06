@@ -13,11 +13,22 @@
     #define ON_DEBUG(...)
 #endif
 
-void show_data_base(Node_t* root);
-void clean_buffer();
-void game_mode(Node_t* root, const char* filename_data_base, int choise);
-void output_definition(Node_t* root, Path path, char data[]);
-Tree_errors definition_node(Node_t* root);
+static void show_data_base(Node_t* root);
+static void clean_buffer();
+static void game_mode(Node_t* root, const char* filename_data_base, int choise);
+static void output_definition(Node_t* root, Path path, char data[]);
+static Tree_errors definition_node(Node_t* root);
+static Tree_errors saveTree(Node_t* root, FILE *file, int level);
+static Tree_errors akinator(Node_t* root);
+static Tree_errors add_new_node(Node_t* current);
+static Tree_errors build_path(Node_t* root, Node_t* node, Path* pth);
+static Tree_errors compare_nodes(Node_t* root);
+static int get_common_part(Path first_path, Path second_path);
+static Tree_errors check_node_exists(Node_t* root, Node_t** node, const char* promts, char elem[]);
+static Tree_errors output_unique_features(Node_t* root, int common_part, char first_elem[], Path path);
+static Tree_errors output_common_features(int common_part, Path path);
+static Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE);
+static char* remove_question_mark(char* str);
 
 void clean_buffer()
 {
@@ -460,6 +471,60 @@ Tree_errors output_common_features(int common_part, Path path)
             fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"),remove_question_mark( path.path[i]));
         }
     }
+
+    return SUCCESS;
+}
+
+Node_t* build_tree(Node_t* root, char** string_buffer, size_t* line_number, size_t number_of_string)
+{
+    assert(string_buffer);
+
+    if (*line_number >= number_of_string) { return nullptr; }
+
+    char* current_string = string_buffer[*line_number];
+    while (*current_string == ' ' || *current_string == '\t')
+    {
+        current_string++;
+    }
+
+    if (*current_string == '\0')
+    {
+        (*line_number)++;
+        return build_tree(root, string_buffer, line_number, number_of_string);
+    }
+
+    if (!root)
+    {
+        root = create_node(current_string);
+    }
+
+    (*line_number)++;
+
+    if (root->data[strlen(root->data) - 1] == '?')
+    {
+        root->left  = build_tree(root->left,  string_buffer, line_number, number_of_string);
+        root->right = build_tree(root->right, string_buffer, line_number, number_of_string);
+    }
+
+    return root;
+}
+
+Tree_errors saveTree(Node_t* root, FILE *file, int level)
+{
+    if (!root)
+    {
+        return SUCCESS;
+    }
+
+    for (int i = 0; i < level; i++)
+    {
+        fprintf(file, "    ");
+    }
+
+    fprintf(file, "%s\n", root->data);
+
+    saveTree(root->left, file, level + 1);
+    saveTree(root->right, file, level + 1);
 
     return SUCCESS;
 }

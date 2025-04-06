@@ -5,13 +5,13 @@ FLAGS = -DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-op
 CC = g++
 CMD = $(OBJDIR)/akinator.exe
 INCLUDE = -I../include
-CPPSRC = akinator_game.cpp ../file_data/file_data.cpp ../tree/tree.cpp main.cpp errors.cpp
+CPPSRC = akinator_game.cpp ../file_data/file_data.cpp ../tree/tree.cpp main.cpp errors.cpp ../logger/logger.cpp
 
 CPPOBJ = $(patsubst %.cpp,$(OBJDIR)/%.o,$(notdir $(CPPSRC)))
 
 $(shell mkdir -p $(OBJDIR))
 
-vpath %.cpp .:../file_data:../tree
+vpath %.cpp .:../file_data:../tree:../logger
 
 $(OBJDIR)/%.o: %.cpp
 	@$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@
