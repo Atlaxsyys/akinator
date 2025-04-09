@@ -10,6 +10,7 @@ The program was written on a WSL, but it is easily portable to Windows.
 - **Object Comparison**: The ability to compare two objects, showing their common and unique characteristics.
 - **Visualization of the tree**: Generating a graphical representation of a decision tree using Graphviz.
 - **Saving the database**: Saving the current state of the tree to a file when exiting.
+- **Logging**: Detailed event logging (DEBUG, INFO, ERROR levels)
 
 ## DATABASE
 - database example:
@@ -23,4 +24,26 @@ small?
 - Indentation (spaces or tabs) defines the structure of the tree.
 
 Using Graphviz tree, the visualization of the tree looks like this:
-![example](../for_readme.png)
+![example](for_readme.png)
+
+## Building and running
+if you do not have graphviz installed and you are running on linux or wsl, then type in the console:
+```
+sudo apt install graphviz
+```
+to compile the program, type in the console:
+```
+make build
+```
+to run the program, type in the console:
+```
+make run
+```
+
+## AUTHOR
+The project is my implementation of the Akinator project in Ilya Dedinsky's course.
+For all questions and suggestions, please contact:
+- TG: https://t.me/atlaxsyys
+-  email: y.shafran-06@mail.ru
+- VK: https://vk.com/glupers
+
