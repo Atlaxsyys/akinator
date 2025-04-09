@@ -12,6 +12,16 @@ The program was written on a WSL, but it is easily portable to Windows.
 - **Saving the database**: Saving the current state of the tree to a file when exiting.
 - **Logging**: Detailed event logging (DEBUG, INFO, ERROR levels)
 
+## HOW TO PLAY?
+when you start the program, a menu will appear in the console:
+![example](menu.png)
+- If you choose 1, the guessing game will start, but if Akinator couldn't guess what you guessed, you can add this element with a distinctive characteristic. If akinator guessed your word, he will output it to the console: I guessed right.
+- If you choose 2, a visualization of the tree will appear on the screen.
+- If you choose 3, you must enter the object from the database, and its characteristics will be displayed in the console.
+- If you choose 4, you must enter two objects from the database, and the common and unique characteristics of the objects will be displayed in the console.
+- If you choose 5, The program will end with the new objects saved, if you have added them.
+- If you choose 6, The program will end without saving new objects.
+
 ## DATABASE
 - database example:
 ```
