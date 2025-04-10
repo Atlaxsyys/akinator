@@ -14,13 +14,19 @@ The program was written on a WSL, but it is easily portable to Windows.
 - **Saving the database**: Saving the current state of the tree to a file when exiting.
 - **Logging**: Detailed event logging (DEBUG, INFO, ERROR levels)
 
-## HOW TO PLAY? :video_game:
+## How to play? :video_game:
 when you start the program, a menu will appear in the console:
 ![example](image_for_readme/menu.png)
 - If you choose 1, the guessing game will start, but if Akinator couldn't guess what you guessed, you can add this element with a distinctive characteristic. If akinator guessed your word, he will output it to the console: I guessed right.
+example of a game:
+![example game](image_for_readme/play.png)
 - If you choose 2, a visualization of the tree will appear on the screen.
 - If you choose 3, you must enter the object from the database, and its characteristics will be displayed in the console.
+example of a definition:
+![example definition](image_for_readme/definiton.png)
 - If you choose 4, you must enter two objects from the database, and the common and unique characteristics of the objects will be displayed in the console.
+example of comparing elements:
+![example comparing_nodes](image_for_readme/comparing_nodes.png)
 - If you choose 5, The program will end with the new objects saved, if you have added them.
 - If you choose 6, The program will end without saving new objects.
 
@@ -31,8 +37,8 @@ small?
     mouse
     poltorashka
 ```
-- Should questions end with a symbol **?**
-- Should the answers (leaves of the tree) not contain **?**
+- Should questions end with a symbol `?`
+- Should the answers (leaves of the tree) not contain `?`
 - Indentation (spaces or tabs) defines the structure of the tree.
 
 Using Graphviz tree, the visualization of the tree looks like this:
@@ -51,6 +57,10 @@ to run the program, type in the console:
 ```
 make run
 ```
+
+## License :page_facing_up:
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## AUTHOR :nerd_face:
 The project is my implementation of the "Akinator" in Ilya Dedinsky's course.
