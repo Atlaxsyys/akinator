@@ -6,14 +6,13 @@
 ---
 
 ## 📚 Table of Contents
-- [📝 Project Description](#-project-description)
-- [✨ Features](#-features)
-- [🎮 How to Play](#-how-to-play)
-- [🌳 Database Structure](#-database-structure)
-- [🏗️ Building and Running](#-building-and-running)
-- [📦 Planned Features](#-planned-features)
-- [📄 License](#-license)
-- [👤 Author & Contacts](#-author--contacts)
+- [Project Description 📝](#project-description-writing_hand)
+- [Main features ✨](#main-features-boom)
+- [How to Play? 🎮](#how-to-play-video_game)
+- [Database Structure 🌳](#database-structure-deciduous_tree)
+- [Building and Running 🏗️](#building-and-running-building_construction)
+- [License 📄](#license-page_facing_up)
+- [Author & Contacts 👤](#author-nerd_face)
 
 ---
 
@@ -52,7 +51,7 @@ example of comparing elements:
 - If you choose **Exit with saving**, The program will end with the new objects saved, if you have added them.
 - If you choose **Exit without saving**, The program will end without saving new objects.
 
-## Database Structure 	:deciduous_tree:
+## Database Structure :deciduous_tree:
 - database example:
 ```
 matan?
