@@ -3,31 +3,41 @@
 #include <time.h>
 #include <string.h>
 #include <stdarg.h>
+#include <assert.h>
 
 #include "logger.h"
+#include "colour.h"
+
+static Logger_t* logger = nullptr;
 
 Logger_t* logger_constructor(const char* filename, log_level min_level)
 {
-    Logger_t* logger = (Logger_t*) calloc(1, sizeof(Logger_t));
+    Logger_t* new_logger = (Logger_t*) calloc(1, sizeof(Logger_t));
 
-    logger->file = fopen(filename, "a");
+    new_logger->file = fopen(filename, "a");
+    
+    new_logger->min_level = min_level;
 
-    logger->min_level = min_level;
+    fprintf(new_logger->file, "\n       ===== New Session Started =====\n");
 
-    return logger;
+    set_logger(new_logger);
+
+    return new_logger;
 }
 
-void logger_destructor(Logger_t* logger)
+void logger_destructor(Logger_t* logger_to_destroy)
 {
-    if (logger)
+    if (logger_to_destroy)
     {
-        if (logger->file)
+        if (logger_to_destroy->file)
         {
-            fclose(logger->file);
+            fclose(logger_to_destroy->file);
         }
 
-        free(logger);
+        free(logger_to_destroy);
     }
+
+    set_logger(NULL);
 }
 
 const char* log_level_to_str(log_level level)
@@ -43,16 +53,15 @@ const char* log_level_to_str(log_level level)
 
 void log_message(Logger_t* logger, log_level level, const char* file, int line, const char* format, ...)
 {
+    assert(logger);
+
     time_t current = time(NULL);
 
     char time_str[SIZE_TIME_STR] = {};
 
     strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", localtime(&current));
 
-    fprintf(logger->file, "\n       ===== New Session Started =====\n");
-
     fprintf(logger->file, "[%s] [%s] [%s:%d] ", time_str, log_level_to_str(level), file, line);
-
 
     va_list args = {};
     va_start(args, format);
@@ -61,4 +70,14 @@ void log_message(Logger_t* logger, log_level level, const char* file, int line, 
 
     fprintf(logger->file, "\n");
     fflush(logger->file);
+}
+
+Logger_t* get_logger(void)
+{
+    return logger;
+}
+
+void set_logger(Logger_t* new_logger)
+{
+    logger = new_logger;
 }

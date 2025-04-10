@@ -6,6 +6,7 @@
 #include "colour.h"
 #include "akinator_game.h"
 #include "errors.h"
+#include "logger.h"
 
 #ifdef DEBUG_AKINATOR
     #define ON_DEBUG(...) __VA_ARGS__
@@ -27,7 +28,7 @@ static int get_common_part(Path first_path, Path second_path);
 static Tree_errors check_node_exists(Node_t* root, Node_t** node, const char* promts, char elem[]);
 static Tree_errors output_unique_features(Node_t* root, int common_part, char first_elem[], Path path);
 static Tree_errors output_common_features(int common_part, Path path);
-static Tree_errors exit_with_saving(Node_t* root,const char* FILENAME_DATA_BASE);
+static Tree_errors exit_with_saving(Node_t* root,const char* filename_data_base);
 static char* remove_question_mark(char* str);
 
 void clean_buffer()
@@ -115,7 +116,7 @@ Tree_errors add_new_node(Node_t* current)
 
     char* fgets_err_first = fgets(new_answer, sizeof(new_answer), stdin);
     if(! fgets_err_first) {
-        ERROR_MESSAGE(FGETS_ERR) }
+        LOG_ERROR("fgets error"); }
 
     new_answer[strlen(new_answer) - 1] = '\0';
 
@@ -123,20 +124,19 @@ Tree_errors add_new_node(Node_t* current)
 
     char* fgets_err_second = fgets(new_question, sizeof(new_question), stdin);
     if (! fgets_err_second) {
-        ERROR_MESSAGE(FGETS_ERR) }
+        LOG_ERROR("fgets error"); }
 
     new_question[strlen(new_question) - 1] = '\0';
 
     char* old_answer = strdup(current->data);
     if (! old_answer) {
-        ERROR_MESSAGE(NULLPTR_ERR) }
+        LOG_ERROR("old_answer = nullptr"); }
 
     free(current->data);
 
     current->data = strdup(new_question);
-
     if (! current->data) {
-        ERROR_MESSAGE(NULLPTR_ERR) }
+        LOG_ERROR("current->data = nullptr"); }
 
     current->left  = create_node(new_answer);
     current->right = create_node(old_answer);
@@ -157,9 +157,9 @@ void menu(Node_t* root, const char* filename_data_base)
     {
         fprintf(stderr, PURPLE_TEXT("------ Welcome to the Akinator game ------\n"));
         fprintf(stderr, GREEN_TEXT("%d. Play\n"), PLAY);
-        fprintf(stderr, GREEN_TEXT("%d. Show data_base\n"), SHOW_DATA_BASE);
+        fprintf(stderr, GREEN_TEXT("%d. Show database\n"), SHOW_DATA_BASE);
         fprintf(stderr, GREEN_TEXT("%d. definition\n"), DEFINITION);
-        fprintf(stderr, GREEN_TEXT("%d. Compare_elements\n"), COMPARE_NODES);
+        fprintf(stderr, GREEN_TEXT("%d. Compare elements\n"), COMPARE_NODES);
         fprintf(stderr, GREEN_TEXT("%d. Exit with saving\n"), EXIT_WITH_SAVING);
         fprintf(stderr, GREEN_TEXT("%d. Exit without saving\n"), EXIT_WITHOUT_SAVING);
         fprintf(stderr, LIGHT_BLUE_TEXT("choose an action\n"));
@@ -221,20 +221,19 @@ void game_mode(Node_t* root, const char* filename_data_base, int choise)
         }
 }
 
-Tree_errors exit_with_saving(Node_t* root, const char* FILENAME_DATA_BASE)
+Tree_errors exit_with_saving(Node_t* root, const char* filename_data_base)
 {
     assert(root);
 
-    FILE* file_write = fopen(FILENAME_DATA_BASE, "wb");
+    FILE* file_write = fopen(filename_data_base, "wb");
     if (! file_write) { 
-        ERROR_MESSAGE(FILE_OPEN_ERR) }
+        LOG_ERROR("file opening error: %s", filename_data_base); }
     
     int level = 0;
     saveTree(root, file_write, level);
 
     if (fclose(file_write) != 0) {
-        ERROR_MESSAGE(FILE_CLOSE_ERR) }
-
+        LOG_ERROR("file closing error: %s", filename_data_base); }
     fprintf(stderr, PURPLE_TEXT("Exit - new data_base saved, goodbye bro!\n"));
 
     return SUCCESS;
@@ -248,7 +247,7 @@ void show_data_base(Node_t* root)
     
     int written = snprintf(command, sizeof(command), "wslview ../graph_dump/graph_%d.png", number_of_file);
     if (written < 0) {
-        ERROR_MESSAGE(SNPRINTF_ERR) }
+        LOG_ERROR("snprintf error"); }
     
     system(command);
 }
@@ -258,8 +257,12 @@ Tree_errors build_path(Node_t* root, Node_t* node, Path* pth)
     assert(root);
 
     pth->path[pth->number_of_nodes] = strdup(root->data);
-    if(! pth->path[pth->number_of_nodes]) {
-        ERROR_MESSAGE(NULLPTR_ERR) }
+    if(! pth->path[pth->number_of_nodes])
+    {
+        LOG_ERROR(RED_TEXT("pth->path[pth->number_of_nodes] = nullptr"));
+        
+        return NULLPTR_ERR;
+    }
 
     pth->number_of_nodes++; 
 
@@ -316,7 +319,8 @@ Tree_errors definition_node(Node_t* root)
 
     Path path = {};
 
-    build_path(root, node, &path);
+    Tree_errors err = build_path(root, node, &path);
+    if(! err)   LOG_ERROR("build_path error");
 
     output_definition(root, path, data);
 
@@ -364,14 +368,24 @@ Tree_errors compare_nodes(Node_t* root)
     check_node_exists(root, &first_node, prompts[0], first_elem);
     check_node_exists(root, &second_node, prompts[1], second_elem);
 
-
     Path first_path  = {};
     Path second_path = {};
 
-    build_path(root, first_node,  &first_path );
-    build_path(root, second_node, &second_path);
+    Tree_errors err_first  = build_path(root, first_node,  &first_path );
+    if (! err_first)    LOG_ERROR("first build path error");
+
+    Tree_errors err_second = build_path(root, second_node, &second_path);
+    if (! err_second)    LOG_ERROR("second build path error");
+
+    LOG_DEBUG("------------------   paths ------------------");
+    for(int i = 0; i < first_path.number_of_nodes;  i++) LOG_DEBUG("first_path[%d]: %s", i, first_path.path[i] );
+    for(int i = 0; i < second_path.number_of_nodes; i++) LOG_DEBUG("second_path[%d]: %s", i, second_path.path[i]);
+    LOG_DEBUG("-----------------------------------------------");
+
 
     int common_part = get_common_part(first_path, second_path);
+
+    LOG_DEBUG("common_part of paths: %d", common_part);
 
     output_common_features(common_part, first_path);
 
@@ -435,13 +449,8 @@ Tree_errors output_unique_features(Node_t* root, int common_part, char first_ele
         {
             Node_t* parent = search_node(root, path.path[i - 1]);
 
-            ON_DEBUG( if(parent && parent->right)
-                fprintf(stderr, PURPLE_TEXT("parent->data: %s parent->right->data: %s first_path.path[%d]: %s\n"), parent->data, parent->right->data, i, first_path.path[i]); )
-
             if (parent && parent->right && strcmp(parent->right->data, path.path[i]) == 0)
             {
-                ON_DEBUG(fprintf(stderr, GREEN_TEXT("parent->data: %s parent->right->data: %s first_path.path[%d]: %s\n"), parent->data, parent->right->data, i, first_path.path[i]); )
-
                 fprintf(stderr, LIGHT_BLUE_TEXT("- No %s\n"), remove_question_mark( path.path[i - 1]));
             }
             
@@ -468,7 +477,7 @@ Tree_errors output_common_features(int common_part, Path path)
     {
         for (int i = 1; i < common_part; i++)
         {
-            fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"),remove_question_mark( path.path[i]));
+            fprintf(stderr, LIGHT_BLUE_TEXT("- %s\n"), remove_question_mark( path.path[i]));
         }
     }
 

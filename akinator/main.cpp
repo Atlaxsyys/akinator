@@ -14,13 +14,14 @@
 int main(const int argc, const char* argv[])
 {
     const char* log_filename = "../logger/logger.log";
+
     Logger_t* logger = logger_constructor(log_filename, DEBUG);
 
-    logger_destructor(logger);
+    LOG_INFO("The program has begun");
 
     if (argc != 2)
     {
-        fprintf(stderr, "Error: not enough args:\n %s <txt_file>", argv[0]);
+        LOG_ERROR("Error: not enough args:\n %s <txt_file>", argv[0]);
 
         return NOT_ENOUGH_ARGC;
     }
@@ -29,19 +30,22 @@ int main(const int argc, const char* argv[])
 
     if (! file_read)
     {
-        ERROR_MESSAGE(FILE_OPEN_ERR)
+        LOG_ERROR("FILE OPEN ERROR");
 
         return FILE_OPEN_ERR;
     }
 
     char* text_buffer       = create_buffer(file_read);
     long size_file          = size_text_file(file_read);
+
     size_t number_of_string = n_string(text_buffer, size_file);
+    LOG_DEBUG("number_of_string: %zu", number_of_string);
 
     char** string_buffer = create_string_buffer(text_buffer, file_read);
     
-    if (fclose(file_read)) {
-        ERROR_MESSAGE(FILE_CLOSE_ERR) } 
+    for (size_t i = 0; i < number_of_string; i++)  LOG_DEBUG("string_buffer[%d]: %s", i, string_buffer[i]);
+    
+    if (fclose(file_read)) LOG_ERROR("FILE CLOSE ERROR");
 
     size_t line_number = 0;
 
@@ -49,15 +53,17 @@ int main(const int argc, const char* argv[])
 
     if(! root)
     {
-        ERROR_MESSAGE(NULLPTR_ERR)
+        LOG_ERROR("root = nullptr!");
         
         return NULLPTR_ERR;
     }
 
     const char* filename_data_base = argv[1];
+    LOG_DEBUG("filename_data_base: %s", filename_data_base);
 
     menu(root, filename_data_base);
     
+    logger_destructor(logger);
     free_tree(&root);
     free(text_buffer);
     free(string_buffer);

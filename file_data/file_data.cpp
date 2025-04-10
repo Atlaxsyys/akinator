@@ -4,6 +4,7 @@
 
 #include "file_data.h"
 #include "errors.h"
+#include "logger.h"
 
 long size_text_file(FILE* file_read)
 {
@@ -24,11 +25,11 @@ char* create_buffer(FILE* file_read)
 
     char* text_buffer = (char*) calloc((size_t) size_file + 1, sizeof(char));
     if(! text_buffer) {
-        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+        LOG_ERROR("text_buffer = nullptr!"); }
 
     size_t number_of_reads = fread(text_buffer, sizeof(char), (size_t) size_file + 1, file_read);
     if (number_of_reads != (size_t) size_file) {
-        ERROR_MESSAGE(FREAD_ERR) }
+        LOG_ERROR("fread error: number_of_reads != size_file"); }
 
     rewind(file_read);
 
@@ -62,7 +63,7 @@ char** create_string_buffer(char* text_buffer, FILE* file_read)
 
     char** string_buffer = (char**) calloc(number_of_lines + 1, sizeof(char*));
     if(! string_buffer) {
-        ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
+        LOG_ERROR("memore allocation error(string_buffer)"); }
 
     int line_number = 1;
     
