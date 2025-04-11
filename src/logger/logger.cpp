@@ -58,7 +58,7 @@ void logger_destructor(Logger_t* logger_to_destroy)
         if (logger_to_destroy->file)
         {
             if (logger_to_destroy->auto_flush)  fflush(logger_to_destroy->file);
-            
+
             fclose(logger_to_destroy->file);
         }
 
@@ -72,7 +72,7 @@ void logger_destructor(Logger_t* logger_to_destroy)
     
     if (current_logger == logger_to_destroy)
     {
-        set_logger(NULL);
+        set_logger(nullptr);
     }
 }
 
