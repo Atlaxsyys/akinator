@@ -1,32 +1,96 @@
 
        ===== New Session Started =====
-[2025-04-11 19:00:02] [INFO] [akinator/main.cpp:20] The program has begun
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
-[2025-04-11 19:00:02] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
+[2025-04-11 19:43:42] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 19:43:42] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-11 19:44:02] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 19:44:02] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-11 20:14:06] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 20:14:06] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt

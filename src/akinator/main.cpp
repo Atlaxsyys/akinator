@@ -14,9 +14,9 @@
 int main(const int argc, const char* argv[])
 {
     const char* log_filename = "../resources/logger/logger.log";
-        
-    Logger_t* logger = logger_constructor(log_filename, DEBUG);
-
+    
+    Logger_t* logger = logger_constructor(log_filename, DEBUG, false);
+    
     LOG_INFO("The program has begun");
 
     if (argc != 2)
