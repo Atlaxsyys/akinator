@@ -13,8 +13,8 @@
 
 int main(const int argc, const char* argv[])
 {
-    const char* log_filename = "../logger/logger.log";
-
+    const char* log_filename = "../resources/logger/logger.log";
+        
     Logger_t* logger = logger_constructor(log_filename, DEBUG);
 
     LOG_INFO("The program has begun");

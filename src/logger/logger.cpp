@@ -15,6 +15,8 @@ Logger_t* logger_constructor(const char* filename, log_level min_level)
     Logger_t* new_logger = (Logger_t*) calloc(1, sizeof(Logger_t));
 
     new_logger->file = fopen(filename, "a");
+
+    if(! new_logger->file) fprintf(stderr, RED_TEXT("DAMIRIRR"));
     
     new_logger->min_level = min_level;
 

@@ -1,0 +1,737 @@
+
+       ===== New Session Started =====
+[2025-04-07 18:15:03] [INFO] [main.cpp:20] [32mThe program has begun[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:42] [33mnumber_of_string: 27[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[0]: Prepod?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[1]:     semer?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[2]:         matan?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[3]:             lector?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[4]:                 znamka[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[5]:                 zagr_mamont[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[6]:             linal?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[7]:                 anechka[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[8]:                 physics?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[9]:                     kholin[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[10]:                     LEGENDARY?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[11]:                         kuliev[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[12]:                         teorver?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[13]:                             SHTEPIN[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[14]:                             freak[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[15]:         livanov[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[16]:     student?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[17]:         live in 209?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[18]:             square head?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[19]:                 damir[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[20]:                 prodva?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[21]:                     anchik[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[22]:                     dima[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[23]:             xyi[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[24]:         small?[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[25]:             mouse[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:46] [33mstring_buffer[26]:             poltorashka[0m
+[2025-04-07 18:15:03] [DEBUG] [main.cpp:62] [33mfilename_data_base: ../data/data_base.txt[0m
+
+       ===== New Session Started =====
+[2025-04-07 18:18:59] [INFO] [main.cpp:20] [32mThe program has begun[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:42] [33mnumber_of_string: 27[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[0]: Prepod?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[1]:     semer?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[2]:         matan?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[3]:             lector?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[4]:                 znamka[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[5]:                 zagr_mamont[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[6]:             linal?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[7]:                 anechka[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[8]:                 physics?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[9]:                     kholin[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[10]:                     LEGENDARY?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[11]:                         kuliev[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[12]:                         teorver?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[13]:                             SHTEPIN[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[14]:                             freak[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[15]:         livanov[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[16]:     student?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[17]:         live in 209?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[18]:             square head?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[19]:                 damir[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[20]:                 prodva?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[21]:                     anchik[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[22]:                     dima[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[23]:             xyi[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[24]:         small?[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[25]:             mouse[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:46] [33mstring_buffer[26]:             poltorashka[0m
+[2025-04-07 18:18:59] [DEBUG] [main.cpp:62] [33mfilename_data_base: ../data/data_base.txt[0m
+
+       ===== New Session Started =====
+[2025-04-09 00:08:11] [INFO] [main.cpp:20] [32mThe program has begun[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:42] [33mnumber_of_string: 27[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[0]: Prepod?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[1]:     semer?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[2]:         matan?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[3]:             lector?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[4]:                 znamka[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[5]:                 zagr_mamont[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[6]:             linal?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[7]:                 anechka[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[8]:                 physics?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[9]:                     kholin[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[10]:                     LEGENDARY?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[11]:                         kuliev[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[12]:                         teorver?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[13]:                             SHTEPIN[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[14]:                             freak[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[15]:         livanov[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[16]:     student?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[17]:         live in 209?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[18]:             square head?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[19]:                 damir[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[20]:                 prodva?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[21]:                     anchik[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[22]:                     dima[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[23]:             xyi[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[24]:         small?[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[25]:             mouse[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:46] [33mstring_buffer[26]:             poltorashka[0m
+[2025-04-09 00:08:11] [DEBUG] [main.cpp:62] [33mfilename_data_base: ../data/data_base.txt[0m
+
+       ===== New Session Started =====
+[2025-04-09 00:17:43] [INFO] [main.cpp:20] [32m The program has begun[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:42] [33m number_of_string: 27[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[0]: Prepod?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[1]:     semer?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[2]:         matan?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[3]:             lector?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[4]:                 znamka[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[5]:                 zagr_mamont[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[6]:             linal?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[7]:                 anechka[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[8]:                 physics?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[9]:                     kholin[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[10]:                     LEGENDARY?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[11]:                         kuliev[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[12]:                         teorver?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[13]:                             SHTEPIN[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[14]:                             freak[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[15]:         livanov[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[16]:     student?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[17]:         live in 209?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[18]:             square head?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[19]:                 damir[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[20]:                 prodva?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[21]:                     anchik[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[22]:                     dima[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[23]:             xyi[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[24]:         small?[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[25]:             mouse[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:46] [33m string_buffer[26]:             poltorashka[0m
+[2025-04-09 00:17:43] [DEBUG] [main.cpp:62] [33m filename_data_base: ../data/data_base.txt[0m
+
+       ===== New Session Started =====
+[2025-04-09 00:21:18] [INFO] [main.cpp:20] [32m The program has begun[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:42] [33m number_of_string: 27[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[0]: Prepod?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[1]:     semer?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[2]:         matan?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[3]:             lector?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[4]:                 znamka[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[5]:                 zagr_mamont[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[6]:             linal?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[7]:                 anechka[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[8]:                 physics?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[9]:                     kholin[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[10]:                     LEGENDARY?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[11]:                         kuliev[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[12]:                         teorver?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[13]:                             SHTEPIN[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[14]:                             freak[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[15]:         livanov[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[16]:     student?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[17]:         live in 209?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[18]:             square head?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[19]:                 damir[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[20]:                 prodva?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[21]:                     anchik[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[22]:                     dima[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[23]:             xyi[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[24]:         small?[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[25]:             mouse[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:46] [33m string_buffer[26]:             poltorashka[0m
+[2025-04-09 00:21:18] [DEBUG] [main.cpp:62] [33m filename_data_base: ../data/data_base.txt[0m
+
+       ===== New Session Started =====
+[2025-04-09 22:46:19] [INFO] [main.cpp:20] The program has begun
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[21]:                     anchik
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[23]:             xyi
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-09 22:46:19] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-09 22:49:40] [INFO] [main.cpp:20] The program has begun
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[21]:                     anchik
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[23]:             xyi
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-09 22:49:40] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:373] ------------------   paths ------------------
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:374] [33mfirst_path:  Prepod?[0m
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:374] [33mfirst_path:  student?[0m
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:374] [33mfirst_path:  live in 209?[0m
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:374] [33mfirst_path:  square head?[0m
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:374] [33mfirst_path:  damir[0m
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: Prepod?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: semer?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: matan?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: linal?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: physics?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: LEGENDARY?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: teorver?
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:375] second_path: freak
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:376] -----------------------------------------------
+[2025-04-09 22:49:45] [DEBUG] [akinator_game.cpp:381] common_part of paths: 1
+
+       ===== New Session Started =====
+[2025-04-09 22:51:15] [INFO] [main.cpp:20] The program has begun
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[21]:                     anchik
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[23]:             xyi
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-09 22:51:15] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:373] ------------------   paths ------------------
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:374] first_path[0]: Prepod?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:374] first_path[1]: student?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:374] first_path[2]: live in 209?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:374] first_path[3]: square head?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:374] first_path[4]: damir
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[0]: Prepod?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[1]: semer?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[2]: matan?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[3]: linal?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[4]: physics?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[5]: LEGENDARY?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[6]: teorver?
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:375] second_path[7]: freak
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:376] -----------------------------------------------
+[2025-04-09 22:51:23] [DEBUG] [akinator_game.cpp:381] common_part of paths: 1
+
+       ===== New Session Started =====
+[2025-04-10 00:29:54] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[23]:             xyi
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 00:29:54] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 00:31:27] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 00:31:27] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 00:33:25] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 00:33:25] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 01:11:03] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 01:11:03] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 01:16:02] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 01:16:02] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 13:08:48] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 13:08:48] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-10 13:14:03] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 13:14:03] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+[2025-04-10 13:14:06] [ERROR] [akinator_game.cpp:324] build_path error
+
+       ===== New Session Started =====
+[2025-04-10 13:17:44] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 13:17:44] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+[2025-04-10 13:18:03] [ERROR] [akinator_game.cpp:376] first build path error
+[2025-04-10 13:18:03] [ERROR] [akinator_game.cpp:379] second build path error
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:381] ------------------   paths ------------------
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:382] first_path[0]: Prepod?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:382] first_path[1]: student?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:382] first_path[2]: live in 209?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:382] first_path[3]: square head?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:382] first_path[4]: damir
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:383] second_path[0]: Prepod?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:383] second_path[1]: student?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:383] second_path[2]: small?
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:383] second_path[3]: mouse
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:384] -----------------------------------------------
+[2025-04-10 13:18:03] [DEBUG] [akinator_game.cpp:389] common_part of paths: 2
+[2025-04-10 13:18:26] [ERROR] [akinator_game.cpp:376] first build path error
+[2025-04-10 13:18:26] [ERROR] [akinator_game.cpp:379] second build path error
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:381] ------------------   paths ------------------
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:382] first_path[0]: Prepod?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:382] first_path[1]: student?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:382] first_path[2]: live in 209?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:382] first_path[3]: square head?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:382] first_path[4]: damir
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[0]: Prepod?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[1]: student?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[2]: live in 209?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[3]: square head?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[4]: prodva?
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:383] second_path[5]: dima
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:384] -----------------------------------------------
+[2025-04-10 13:18:26] [DEBUG] [akinator_game.cpp:389] common_part of paths: 4
+[2025-04-10 13:18:50] [ERROR] [akinator_game.cpp:376] first build path error
+[2025-04-10 13:18:50] [ERROR] [akinator_game.cpp:379] second build path error
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:381] ------------------   paths ------------------
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:382] first_path[0]: Prepod?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:382] first_path[1]: student?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:382] first_path[2]: live in 209?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:382] first_path[3]: square head?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:382] first_path[4]: damir
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[0]: Prepod?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[1]: semer?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[2]: matan?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[3]: linal?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[4]: physics?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[5]: LEGENDARY?
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:383] second_path[6]: kuliev
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:384] -----------------------------------------------
+[2025-04-10 13:18:50] [DEBUG] [akinator_game.cpp:389] common_part of paths: 1
+[2025-04-10 13:19:05] [ERROR] [akinator_game.cpp:376] first build path error
+[2025-04-10 13:19:05] [ERROR] [akinator_game.cpp:379] second build path error
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:381] ------------------   paths ------------------
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:382] first_path[0]: Prepod?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:382] first_path[1]: student?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:382] first_path[2]: live in 209?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:382] first_path[3]: square head?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:382] first_path[4]: damir
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[0]: Prepod?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[1]: semer?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[2]: matan?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[3]: linal?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[4]: physics?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[5]: LEGENDARY?
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:383] second_path[6]: kuliev
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:384] -----------------------------------------------
+[2025-04-10 13:19:05] [DEBUG] [akinator_game.cpp:389] common_part of paths: 1
+
+       ===== New Session Started =====
+[2025-04-10 14:44:50] [INFO] [main.cpp:20] The program has begun
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:42] number_of_string: 27
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[1]:     semer?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[2]:         matan?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[3]:             lector?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[6]:             linal?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[14]:                             freak
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[15]:         livanov
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[16]:     student?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[18]:             square head?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[19]:                 damir
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[22]:                     dima
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[23]:             kati
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[24]:         small?
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[25]:             mouse
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-10 14:44:50] [DEBUG] [main.cpp:62] filename_data_base: ../data/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-11 18:45:25] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 18:45:25] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-11 18:46:16] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 18:46:16] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
+
+       ===== New Session Started =====
+[2025-04-11 18:48:01] [INFO] [akinator/main.cpp:20] The program has begun
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:42] number_of_string: 27
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[0]: Prepod?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[1]:     semer?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[2]:         matan?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[3]:             lector?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[4]:                 znamka
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[5]:                 zagr_mamont
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[6]:             linal?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[7]:                 anechka
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[8]:                 physics?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[9]:                     kholin
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[10]:                     LEGENDARY?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[11]:                         kuliev
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[12]:                         teorver?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[13]:                             SHTEPIN
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[14]:                             freak
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[15]:         livanov
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[16]:     student?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[17]:         live in 209?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[18]:             square head?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[19]:                 damir
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[20]:                 prodva?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[21]:                     danchik
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[22]:                     dima
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[23]:             kati
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[24]:         small?
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[25]:             mouse
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:46] string_buffer[26]:             poltorashka
+[2025-04-11 18:48:01] [DEBUG] [akinator/main.cpp:62] filename_data_base: ../resources/data_base.txt
