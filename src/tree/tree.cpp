@@ -129,8 +129,8 @@ int generate_dot(Node_t* root)
     if(! command) {
         ERROR_MESSAGE(MEMORY_ALLOC_ERR) }
 
-    int written_first  = snprintf(dot_filename, SIZE_DOT_FILENAME, "../graph_dump/graph_%d.dot", file_counter);
-    int written_second = snprintf(png_filename, SIZE_PNG_FILENAME, "../graph_dump/graph_%d.png", file_counter);
+    int written_first  = snprintf(dot_filename, SIZE_DOT_FILENAME, "../resources/graph_dump/graph_%d.dot", file_counter);
+    int written_second = snprintf(png_filename, SIZE_PNG_FILENAME, "../resources/graph_dump/graph_%d.png", file_counter);
 
     if (written_first <  0) ERROR_MESSAGE(SNPRINTF_ERR)
     if (written_second < 0) ERROR_MESSAGE(SNPRINTF_ERR)

@@ -245,7 +245,7 @@ void show_data_base(Node_t* root)
     
     char command[SIZE_DOT_FILENAME] = {};
     
-    int written = snprintf(command, sizeof(command), "wslview ../graph_dump/graph_%d.png", number_of_file);
+    int written = snprintf(command, sizeof(command), "wslview ../resources/graph_dump/graph_%d.png", number_of_file);
     if (written < 0) {
         LOG_ERROR("snprintf error"); }
     
