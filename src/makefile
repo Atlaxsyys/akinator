@@ -3,6 +3,7 @@
 SRC_DIR = .
 INCLUDE_DIR = ../include
 OBJ_DIR = ../obj
+LOG_DIR = $(RESOURCES_DIR)/logger
 RESOURCES_DIR = ../resources
 CMD = $(OBJ_DIR)/akinator.exe
 
@@ -35,6 +36,7 @@ CPPOBJ = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(notdir $(CPPSRC)))
 vpath %.cpp akinator file_data tree logger errors
 
 $(shell mkdir -p $(OBJ_DIR))
+$(shell mkdir -p $(LOG_DIR))
 
 $(OBJ_DIR)/%.o: %.cpp
 	@$(CC) $(FLAGS) $(INCLUDE) -c $< -g -o $@

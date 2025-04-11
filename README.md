@@ -31,23 +31,23 @@ The program was written on a WSL, but it is easily portable to Windows.
 
 ## How to play? :video_game:
 when you start the program, a menu will appear in the console:
-![example](image_for_readme/menu.png)
+![example](resources/images/image_for_readme/menu.png)
 - If you choose **play**, the guessing game will start, but if Akinator couldn't guess what you guessed, you can add this element with a distinctive characteristic. If akinator guessed your word, he will output it to the console: I guessed right.
 
 example of a game:
 
-![example game](image_for_readme/play.png)
+![example game](resources/images/image_for_readme/play.png)
 
 - If you choose **show database**, a visualization of the tree will appear on the screen.
 - If you choose **definition**, you must enter the object from the database, and its characteristics will be displayed in the console.
 
 example of a definition:
 
-![example definition](image_for_readme/definiton.png)
+![example definition](resources/images/image_for_readme/definiton.png)
 
 - If you choose **compare elements**, you must enter two objects from the database, and the common and unique characteristics of the objects will be displayed in the console.
 example of comparing elements:
-![example comparing_nodes](image_for_readme/comparing_nodes.png)
+![example comparing_nodes](resources/images/image_for_readme/comparing_nodes.png)
 - If you choose **Exit with saving**, The program will end with the new objects saved, if you have added them.
 - If you choose **Exit without saving**, The program will end without saving new objects.
 
@@ -69,7 +69,7 @@ matan?
 - Indentation (spaces or tabs) defines the structure of the tree.
 
 Using Graphviz tree, the visualization of the tree looks like this:
-![example](image_for_readme/for_readme.png)
+![example](resources/images/image_for_readme/for_readme.png)
 
 ## Building and running :building_construction:
 if you do not have graphviz installed and you are running on linux or wsl, then type in the console:
